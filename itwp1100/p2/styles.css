@@ -122,7 +122,7 @@ Add a black background color to the top navigation */
   width: auto;
 }
 .cell-4 {
-  background: gold;
+  background: rgb(255, 222, 113);
   grid-area: right;
   width: auto;
 }
