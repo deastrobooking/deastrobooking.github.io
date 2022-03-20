@@ -24,10 +24,12 @@
         <a href="page2.html" class="responsive">2D Graphing</a>
         <a href="page1.html" class="responsive">Quiz1</a>
         <a href="page3.html" class="responsive">Quadratic</a>
-        <img src="images/logo.png" class="navilogo">
+        <img src="images/logo.png" class="navilogo2">
+        
       </p>
     </header>
    <div class="container">
+     <!-- Left Cell-->
     <aside class="cell cell-2">
     <p>
       This is a test paragraph, There isn't much to say about addition just add those numbers together any way you can chump! 
@@ -36,8 +38,10 @@
     <main class="cell cell-3">
       ]<h2 id="question"></h2>
       <input type="text" name="answer" id="answer" style="width: 250px; height: 40px; font-size: 32px;"><button onclick="fire()">Enter</button>
+      <button type="reset" onclick="document.location.reload()">RESET</button>
 
     </main>
+    <!-- Right Cell-->
     <aside class="cell cell-4">
       <p>
         This is a test paragraph, There isn't much to say about addition just add those numbers together any way you can chump! 
@@ -64,7 +68,7 @@
         function fire() {
     var uanswer = document.getElementById('answer').value;
           if (uanswer == qanswer) {
-            alert("Nice math skills! Refresh the page to play again!");
+            console.log("Great Job click Refresh to try another")
             
             
           } else {
