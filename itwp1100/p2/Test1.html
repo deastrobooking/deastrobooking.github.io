@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-     <style>
+    <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+    <style>
 body {
     font-family: Open Sans;
 }
@@ -168,11 +169,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q2" value=".2">.2</li>
-            <br>
+            
 
 
         </ul>
-
+        <br>
         \[3.~ What~ is~~\frac{999}{1000}?\]
 
         <ul>
@@ -194,9 +195,9 @@ h1 {
 
                 <input type="radio" name="q3" value="2">2</li>
 
-                <br>
+                
         </ul>
-
+        <br>
         \[4.~ What~is~the~sum~?~~~\frac{3334}{22} +\frac{67}{98}\] 
 
         <ul>
@@ -216,10 +217,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q4" value="152.23">152.23</li>
-                <br>
+                
 
 
         </ul>
+        <br>
       
        5. What is 2/5 + 4/6 + 100 + 4?
 
@@ -244,6 +246,7 @@ h1 {
 
 
         </ul>
+        <br>
        6. What is 897858665/99999?
 
         <ul>
@@ -263,10 +266,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q6" value="8,988.23">8,988.23</li>
-                <br>
+                
 
 
         </ul>
+        <br>
       7. What is 2+4-3+99-12+23-3-78+89+1-54+2-33-6+78+3-9?
 
         <ul>
@@ -286,10 +290,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q7" value="92">92</li>
-                <br>
+                
 
 
         </ul>
+        <br>
       8. What is 6+7+8+1+2+3+8+0+8+5+7+1234?
 
         <ul>
@@ -310,11 +315,12 @@ h1 {
             <li>
 
                 <input type="radio" name="q8" value="1289">1289</li>
-                <br>
+                
                 
 
 
         </ul>
+        <br>
       
             9. What is 100000000/1000000?
 
@@ -336,10 +342,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q9" value=".01">.01</li>
-                <br>
+                
 
 
         </ul>
+        <br>
         10. What is 2+2/10?
 
         <ul>
@@ -359,21 +366,11 @@ h1 {
             <li>
 
                 <input type="radio" name="q10" value=".9">.9</li>
-                <br>
+                
 
         </ul>
+        <br>
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-
         <input type="button" value="Get result" onClick="getScore(this.form)">
 
         <input type="reset" value="Clear answers">
@@ -386,20 +383,13 @@ h1 {
 
             <br>
 
-            <textarea class="bgclr" name="solutions" wrap="virtual" rows="4" cols="30" disabled>
+            <textarea class="bgclr" name="solutions" wrap="none" rows="4" cols="30" disabled>
 
-            </textarea>
-
-
-            <!--https://www.udemy.com/javascript-html-css-project-make-a-quiz-tutorial/-->
-
-            <!--http://www.javascriptsource.com/miscellaneous/basic-javascript-quiz.html-->
-
+            </textarea>   
     </form>
-
 </body>
 
-<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
 
 <script>
 

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="styles.css" rel="stylesheet" type="text/css" />
 	<style>
 		.container {
@@ -31,28 +33,28 @@
 </head>
 
 <body>
-	<div class="topnav" id="myTopnav">
+	<div class="topnav" id="bodynavi">
 		<header class="cell cell-1">
-		  <p class="navi">
-			<img src="images/logo.png" class="navilogo">
-			<a href="../home.html" alt="Cougar Logo" class="responsive">Course Index</a>
-			<a href="index.html" class="responsive">3D Home</a>
-			<a href="page2.html" class="responsive">2D Graphing</a>
-			<a href="page1.html" class="responsive">Addition</a>
-			<a href="page3.html" class="responsive">Quadratic</a>
-			<a href="Test1.html" class="responsive">Test</a>
-			<a href="Test2.html" class="responsive">Test2</a>
-			<a href="contact.html" class="responsive">Contact</a>
-			<img src="images/logo.png" alt="Cougar Logo" class="navilogo2">
-		  </p>
+			<p class="navi">
+				<img src="images/logo.png" alt = "cougar logo" class="navilogo">
+				<a href="../home.html" alt="Cougar Logo" class="responsive">Course Index</a>
+				<a href="index.html" class="responsive">3D Home</a>
+				<a href="page2.html" class="responsive">2D Graphing</a>
+				<a href="page1.html" class="responsive">Addition</a>
+				<a href="page3.html" class="responsive">Quadratic</a>
+				<a href="Test1.html" class="responsive">Test</a>
+				<a href="Test2.html" class="responsive">Test2</a>
+				<a href="contact.html" class="responsive">Contact</a>
+				<img src="images/logo.png" alt="Cougar Logo" class="navilogo2">
+			</p>
 		</header>
-	
-	  </div>
 
-	
+	</div>
+
+
 
 	<div class="container">
-		
+
 		<h2>Ultra Math Contact Form</h2>
 		<form action="#">
 			<label>First Name</label>
@@ -60,33 +62,26 @@
 			<!-- Create all the input boxes and
 			assign there respective functions
 			to update the content in a variable -->
-			<input type="text" id="fname"
-				name="firstname"
-				onchange="updateFname()">
+			<input type="text" id="fname" name="firstname" onchange="updateFname()">
 
 			<label>Last Name</label>
-			<input type="text" id="lname"
-				name="lastname"
-				onchange="updateLname()">
+			<input type="text" id="lname" name="lastname" onchange="updateLname()">
 
 			<label>Subject</label>
-			<textarea id="subject" name="subject"
-				style="height:100px"
-				onchange="updateSubject()">
+			<textarea id="subject" name="subject" style="height:100px" onchange="updateSubject()">
 		</textarea>
 
-			<button class="submit-btn"
-				onclick="false;">
+			<button class="submit-btn" onclick="false;">
 				Submit
 			</button>
 		</form>
 	</div>
 	<footer class="cell cell-5">
 		<script src="js/scriptlesson.js"></script>
-		<a href='http://validator.w3.org/check?uri=referer'  id = "myTopnav" title='HTML5 Validation'>HTML5 Validation</a>
+		<a href='http://validator.w3.org/check?uri=referer' id="myTopnav" title='HTML5 Validation'>HTML5 Validation</a>
 	</footer>
 
-	<script type="text/javascript">
+	<script>
 
 		// Variables to store the input text
 		let fname = '';
@@ -112,21 +107,21 @@
 		// Event listener for the
 		// 'beforeunload' event
 		window.addEventListener('beforeunload',
-								function (e) {
+			function (e) {
 
-			// Check if any of the input
-			// fields are filled
-			if (fname !== '' ||
-				lname !== '' ||
-				subject !== '') {
+				// Check if any of the input
+				// fields are filled
+				if (fname !== '' ||
+					lname !== '' ||
+					subject !== '') {
 
-				// Cancel the event and
-				// show alert that the unsaved
-				// changes would be lost
-				e.preventDefault();
-				e.returnValue = '';
-			}
-		});
+					// Cancel the event and
+					// show alert that the unsaved
+					// changes would be lost
+					e.preventDefault();
+					e.returnValue = '';
+				}
+			});
 	</script>
 </body>
 
