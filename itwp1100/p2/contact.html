@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	<style>
+		.container {
+			border: 2px dotted;
+			width: 60%;
+			border-radius: 5px;
+			padding: 10px;
+			color: blue;
+			background-color: aqua;
+			width: auto;
+		}
+
+		input,
+		textarea {
+			width: 90%;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.submit-btn {
+			background-color: rgb(0, 13, 128);
+			color: white;
+			font-size: 14pt;
+			padding: 18px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="topnav" id="myTopnav">
+		<header class="cell cell-1">
+		  <p class="navi">
+			<img src="images/logo.png" class="navilogo">
+			<a href="../home.html" class="responsive">Course Index</a>
+			<a href="index.html" class="responsive">3D Home</a>
+			<a href="page2.html" class="responsive">2D Graphing</a>
+			<a href="page1.html" class="responsive">Addition</a>
+			<a href="page3.html" class="responsive">Quadratic</a>
+			<a href="Test1.html" class="responsive">Test</a>
+			<a href="Test2.html" class="responsive">Test2</a>
+			<a href="contact.html" class="responsive">Contact</a>
+			<img src="images/logo.png" class="navilogo2">
+		  </p>
+		</header>
+	
+	  </div>
+
+	
+
+	<div class="container">
+		
+		<h2>Ultra Math Contact Form</h2>
+		<form action="#">
+			<label>First Name</label>
+
+			<!-- Create all the input boxes and
+			assign there respective functions
+			to update the content in a variable -->
+			<input type="text" id="fname"
+				name="firstname"
+				onchange="updateFname()">
+
+			<label>Last Name</label>
+			<input type="text" id="lname"
+				name="lastname"
+				onchange="updateLname()">
+
+			<label>Subject</label>
+			<textarea id="subject" name="subject"
+				style="height:100px"
+				onchange="updateSubject()">
+		</textarea>
+
+			<button class="submit-btn"
+				onclick="false;">
+				Submit
+			</button>
+		</form>
+	</div>
+	<footer class="cell cell-5">
+		<script src="js/scriptlesson.js"></script>
+		<a href='http://validator.w3.org/check?uri=referer'  id = "myTopnav" title='HTML5 Validation'>HTML5 Validation</a>
+	</footer>
+
+	<script type="text/javascript">
+
+		// Variables to store the input text
+		let fname = '';
+		let lname = '';
+		let subject = '';
+
+		// Functions to update the input text
+		updateFname = () => {
+			fname = document
+				.getElementById('fname').value;
+		}
+
+		updateLname = () => {
+			lname = document
+				.getElementById('lname').value;
+		}
+
+		updateSubject = () => {
+			subject = document
+				.getElementById('subject').value;
+		}
+
+		// Event listener for the
+		// 'beforeunload' event
+		window.addEventListener('beforeunload',
+								function (e) {
+
+			// Check if any of the input
+			// fields are filled
+			if (fname !== '' ||
+				lname !== '' ||
+				subject !== '') {
+
+				// Cancel the event and
+				// show alert that the unsaved
+				// changes would be lost
+				e.preventDefault();
+				e.returnValue = '';
+			}
+		});
+	</script>
+</body>
+
+</html>
