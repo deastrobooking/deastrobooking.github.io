@@ -4,8 +4,8 @@
 
  *    Tuba Farm Equipment
  *    Variables and functions
- *    Author: Andrea Davis 
- *    Date:   09/15/2017
+ *    Author: Randy Chabot
+ *    Date:   3/13/22
 
  *    Filename: tuba.js
  */
