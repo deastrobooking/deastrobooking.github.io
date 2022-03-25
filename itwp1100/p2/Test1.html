@@ -110,9 +110,6 @@ h1 {
 
     <h1> MATH QUIZ >></h1>
 
-
-
-
     <form name="quiz">
 
         When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are 
@@ -145,8 +142,6 @@ h1 {
         <br>
 
 
-
-
         2. simpify this radical expression:
         \begin{equation*}
         \sqrt{699}
@@ -170,8 +165,6 @@ h1 {
 
                 <input type="radio" name="q2" value=".2">.2</li>
             
-
-
         </ul>
         <br>
         \[3.~ What~ is~~\frac{999}{1000}?\]
@@ -219,7 +212,6 @@ h1 {
                 <input type="radio" name="q4" value="152.23">152.23</li>
                 
 
-
         </ul>
         <br>
       
@@ -243,8 +235,6 @@ h1 {
 
                 <input type="radio" name="q5" value="159.99">159.99</li>
                 
-
-
         </ul>
         <br>
        6. What is 897858665/99999?
@@ -267,8 +257,6 @@ h1 {
 
                 <input type="radio" name="q6" value="8,988.23">8,988.23</li>
                 
-
-
         </ul>
         <br>
       7. What is 2+4-3+99-12+23-3-78+89+1-54+2-33-6+78+3-9?
@@ -290,8 +278,6 @@ h1 {
             <li>
 
                 <input type="radio" name="q7" value="92">92</li>
-                
-
 
         </ul>
         <br>
@@ -311,13 +297,9 @@ h1 {
 
                 <input type="radio" name="q8" value="2216">2216</li>
 
-          
             <li>
 
                 <input type="radio" name="q8" value="1289">1289</li>
-                
-                
-
 
         </ul>
         <br>
@@ -390,21 +372,73 @@ h1 {
     <script>
 
         var numQues = 10;
-    
-    
-    
-    
         var numChoi = 4;
-    
-    
-    
-    
-    
-    
-    
         var answers = new Array(4);
     
+
+        answers[1] = ".64";
     
+        answers[2] = "26.44";
+    
+        answers[3] = ".999";
+      
+        answers[4] = "152.23";
+      
+        answers[5] = "105.07";
+      
+        answers[6] = "8,978.68";
+      
+        answers[7] = "103";
+      
+        answers[8] = "1289";
+      
+        answers[0] = "100";
+      
+        answers[10] = ".4";
+// Getting Results
+    
+        function getResult(form) {
+    
+            var score = 100;
+    
+            var currElt;
+    
+            var currSelection;
+    
+            for (i = 0; i < numQues; i++) {
+    
+                currElt = i * numChoi;
+    
+                for (j = 0; j < numChoi; j++) {
+    
+                    currSelection = form.elements[currElt + j];
+    
+                    if (currSelection.checked) {
+    
+                        if (currSelection.value == answers[i]) {   
+                            score++;   
+                            break;   
+                        }    
+                    }    
+                }    
+            }   
+            score = Math.round(score / numQues * 100);  
+            form.percentage.value = score + "%";
+
+            var correctAnswers = "";
+    
+            for (i = 1; i <= numQues; i++) {    
+                correctAnswers += i + ". " + answers[i - 1] + "\r\n";
+            }
+    
+            form.solutions.value = correctAnswers;
+    
+        }
+    </script>
+    <script>
+        var numQues = 10;
+        var numChoi = 4;   
+        var answers = new Array(4);   
     
         answers[1] = ".64";
     
@@ -426,12 +460,6 @@ h1 {
       
         answers[10] = ".4";
     
-    
-    
-    
-    
-    
-       
     
         function getResult(form) {
     
@@ -471,124 +499,19 @@ h1 {
     
             var correctAnswers = "";
     
-            for (i = 1; i <= numQues; i++) {
-    
-                correctAnswers += i + ". " + answers[i - 1] + "\r\n";
-    
-            }
-    
-            form.solutions.value = correctAnswers;
-    
-        }
-    
-    
-    
-    
+            for (i = 1; i <= numQues; i++) {  
+                correctAnswers += i + ". " + answers[i - 1] + "\r\n";   
+            }  
+            form.solutions.value = correctAnswers;   
+        }  
     </script>
+    
+
+    <footer class="cell cell-5">
+        <script src="js/scriptlesson.js"></script>
+        <a href= "https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp2%2FTest1.html" class = "topnav" id = "ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
+    </footer>
 </body>
+</html>
 
-
-
-<script>
-
-    var numQues = 10;
-
-
-
-
-    var numChoi = 4;
-
-
-
-
-
-
-
-    var answers = new Array(4);
-
-
-
-    answers[1] = ".64";
-
-    answers[2] = "26.44";
-
-    answers[3] = ".999";
-  
-    answers[4] = "152.23";
-  
-    answers[5] = "105.07";
-  
-    answers[6] = "8,978.68";
-  
-    answers[7] = "103";
-  
-    answers[8] = "1289";
-  
-    answers[0] = "100";
-  
-    answers[10] = ".4";
-
-
-
-
-
-
-   
-
-    function getResult(form) {
-
-        var score = 100;
-
-        var currElt;
-
-        var currSelection;
-
-        for (i = 0; i < numQues; i++) {
-
-            currElt = i * numChoi;
-
-            for (j = 0; j < numChoi; j++) {
-
-                currSelection = form.elements[currElt + j];
-
-                if (currSelection.checked) {
-
-                    if (currSelection.value == answers[i]) {
-
-                        score++;
-
-                        break;
-
-                    }
-
-                }
-
-            }
-
-        }
-
-        score = Math.round(score / numQues * 100);
-
-        form.percentage.value = score + "%";
-
-        var correctAnswers = "";
-
-        for (i = 1; i <= numQues; i++) {
-
-            correctAnswers += i + ". " + answers[i - 1] + "\r\n";
-
-        }
-
-        form.solutions.value = correctAnswers;
-
-    }
-
-
-
-
-</script>
-
-<!--http://www.javascriptsource.com/miscellaneous/basic-javascript-quiz.html -->
-
-<!--http://codeactually.com/interactivequiz.html-->
 
