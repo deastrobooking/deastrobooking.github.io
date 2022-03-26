@@ -154,3 +154,10 @@ label {
 #submitBtn {
    float: none;
 }
+
+.cell-5 {
+   background: #e6ccff;
+   grid-area: footer;
+   color: black;
+   width: auto;
+ }
