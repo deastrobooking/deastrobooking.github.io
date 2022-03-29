@@ -1,131 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="logo">
+          <header>
+            
+            <div class="topnav">
+              <ul class="navi">
+                <a href="../home.html" class="responsive">Course Index</a>
+                <a href="index.html" class="responsive">3D Home</a>
+                <a href="page2.html" class="responsive">2D Graphing</a>
+                <a href="page1.html" class="responsive">Addition</a>
+                <a href="page3.html" class="responsive">Quadratic</a>
+                <a href="Test1.html" class="responsive">Test</a>
+                <a href="Test2.html" class="responsive">Test2</a>
+                <a href="contact.html" class="responsive">Contact</a>
+              </ul>
+                <img src="images/logo.png" alt="Cougar Logo" class="navilogo2">
+                <img src="images/logo.png" alt="Cougar Logo" class="navilogo">
+              
+            </div>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="styles.css" rel="stylesheet" type="text/css" />
-	<style>
-		.container {
-			border: 2px dotted;
-			width: 60%;
-			border-radius: 5px;
-			padding: 10px;
-			color: blue;
-			background-color: aqua;
-			width: auto;
-		}
+            
+          </header>
+        </div>
+        
+      </div>
+      <form id="form">
+        <div class="social">
+          <div class="title">Get Started</div>
+          <div class="question">
+            Already Have an Account? <br />
+            <span>Sign In</span>
+          </div>
 
-		input,
-		textarea {
-			width: 90%;
-			padding: 10px;
-			margin: 10px;
-		}
+          <div class="btn">
+            <div class="btn-1">
+              <img
+                src="https://img.icons8.com/color/30/000000/google-logo.png"
+              />
+              Sign Up
+            </div>
+            <div class="btn-2">
+              <img
+                src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
+              />
+              Sign Up
+            </div>
+          </div>
 
-		.submit-btn {
-			background-color: rgb(0, 13, 128);
-			color: white;
-			font-size: 14pt;
-			padding: 18px;
-		}
-	</style>
-	<title>Contact</title>
+          <div class="or">Or</div>
+        </div>
 
-</head>
+        <!-- /** 
+          * ! user name Input here
+         **/ -->
 
-<body>
-	<div class="topnav" id="bodynavi">
-		<header class="cell cell-1">
-			<p class="navi">
-				<img src="images/logo.png" alt = "cougar logo" class="navilogo">
-				<a href="../home.html" class="responsive">Course Index</a>
-				<a href="index.html" class="responsive">3D Home</a>
-				<a href="page2.html" class="responsive">2D Graphing</a>
-				<a href="page1.html" class="responsive">Addition</a>
-				<a href="page3.html" class="responsive">Quadratic</a>
-				<a href="Test1.html" class="responsive">Test</a>
-				<a href="Test2.html" class="responsive">Test2</a>
-				<a href="contact.html" class="responsive">Contact</a>
-				<img src="images/logo.png" alt="Cougar Logo" class="navilogo2">
-			</p>
-		</header>
+        <div>
+          <label for="username">User Name</label>
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Joy Shaheb"
+          />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
 
-	</div>
+        <!-- /** 
+          * ! Email Input here
+         **/ -->
 
+        <div>
+          <label for="email">Email</label>
+          <i class="far fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="abc@gmail.com"
+          />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
 
+        <!-- /** 
+          * ! Password Input here
+         **/ -->
 
-	<div class="container">
+        <div>
+          <label for="password">Password</label>
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password here"
+          />
+          <i class="fas fa-exclamation-circle failure-icon"></i>
+          <i class="far fa-check-circle success-icon"></i>
+          <div class="error"></div>
+        </div>
 
-		<h2>Ultra Math Contact Form</h2>
-		<form action="#">
-			<label>First Name</label>
-
-			<!-- Create all the input boxes and
-			assign there respective functions
-			to update the content in a variable -->
-			<input type="text" id="fname" name="firstname" onchange="updateFname()">
-
-			<label>Last Name</label>
-			<input type="text" id="lname" name="lastname" onchange="updateLname()">
-
-			<label>Subject</label>
-			<textarea id="subject" name="subject" style="height:100px" onchange="updateSubject()">
-		</textarea>
-
-			<button class="submit-btn" onclick="false;">
-				Submit
-			</button>
-		</form>
-	</div>
-	
-
-	<script>
-
-		// Variables to store the input text
-		let fname = '';
-		let lname = '';
-		let subject = '';
-
-		// Functions to update the input text
-		updateFname = () => {
-			fname = document
-				.getElementById('fname').value;
-		}
-
-		updateLname = () => {
-			lname = document
-				.getElementById('lname').value;
-		}
-
-		updateSubject = () => {
-			subject = document
-				.getElementById('subject').value;
-		}
-
-		// Event listener for the
-		// 'beforeunload' event
-		window.addEventListener('beforeunload',
-			function (e) {
-
-				// Check if any of the input
-				// fields are filled
-				if (fname !== '' ||
-					lname !== '' ||
-					subject !== '') {
-
-					// Cancel the event and
-					// show alert that the unsaved
-					// changes would be lost
-					e.preventDefault();
-					e.returnValue = '';
-				}
-			});
-	</script>
-	<footer class="cell cell-5">
-        <script src="js/scriptlesson.js"></script>
-        <a href= "https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp2%2Fcontact.html" class = "topnav" id = "ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
-    </footer>
-</body>
-
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script src="main.js"></script>
 </html>
