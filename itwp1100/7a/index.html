@@ -19,12 +19,13 @@
 </head>
 
 <body>
+   <!-- Title ____________________________________________________-->
    <header>
       <h1>
          Hands-on Project 7-2
       </h1>
    </header>
-
+<!-- HTML LAYOUT BUTTONS ______________________________________________-->
    <article>
       <h2>Day of the Week Lookup</h2>
       <form>
@@ -44,13 +45,14 @@
      </form>
    </article>
     <script>
+       // Variables Declared_________________________________________________
          var selection = document.getElementById("dateSelected");
          var result = document.getElementById("day");
          var allDaysOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
          var selectedDate;
          var dayOfWeekNumber;
          var dayOfWeekName;
-
+         // Code to look up day _______________________________________
        function lookUpDay() {
           selectedDate = new Date(selection.value); //creates a variable whose values is a Date object based on the user's input
           selectedDate.setUTCHours(12); //looks up the day of the week value (0-6) for the new Date object assuming universal time (UTC)
@@ -58,7 +60,7 @@
           dayOfWeekName = allDaysOfWeek [dayOfWeekNumber]; 
           result.innerHTML = dayOfWeekName; //displays the resulting day name in the day of the weeb box on the webpage
        }
-
+       // Function to Create event listener. _________________________
       function createEventListener() {
         var submitButton = document.getElementById("determineDay");
 
