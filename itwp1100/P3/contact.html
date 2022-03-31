@@ -1,134 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      crossorigin="anonymous"
-    />
-    <title>Form Validation</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="content">
-        <div class="logo">
-          <header>
-            
-            <div class="topnav">
-              <ul class="navi">
-                <a href="../home.html" class="responsive">Course Index</a>
-                <a href="index.html" class="responsive">3D Home</a>
-                <a href="page2.html" class="responsive">2D Graphing</a>
-                <a href="page1.html" class="responsive">Addition</a>
-                <a href="page3.html" class="responsive">Quadratic</a>
-                <a href="Test1.html" class="responsive">Test</a>
-                <a href="Test2.html" class="responsive">Test2</a>
-                <a href="contact.html" class="responsive">Contact</a>
-              </ul>
-                <img src="images/logo.png" alt="Cougar Logo" class="navilogo2">
-                <img src="images/logo.png" alt="Cougar Logo" class="navilogo">
-              
-            </div>
-
-            
-          </header>
-        </div>
-        
-      </div>
-      <form id="form">
-        <div class="social">
-          <div class="title">Get Started</div>
-          <div class="question">
-            Already Have an Account? <br />
-            <span>Sign In</span>
-          </div>
-
-          <div class="btn">
-            <div class="btn-1">
-              <img
-                src="https://img.icons8.com/color/30/000000/google-logo.png"
-              />
-              Sign Up
-            </div>
-            <div class="btn-2">
-              <img
-                src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"
-              />
-              Sign Up
-            </div>
-          </div>
-
-          <div class="or">Or</div>
-        </div>
-
-        <!-- /** 
-          * ! user name Input here
-         **/ -->
-
-        <div>
-          <label for="username">User Name</label>
-          <i class="fas fa-user"></i>
-          <input
-            type="text"
-            name="username"
-            id="username"
-            placeholder="Joy Shaheb"
-          />
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-          <div class="error"></div>
-        </div>
-
-        <!-- /** 
-          * ! Email Input here
-         **/ -->
-
-        <div>
-          <label for="email">Email</label>
-          <i class="far fa-envelope"></i>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="abc@gmail.com"
-          />
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-          <div class="error"></div>
-        </div>
-
-        <!-- /** 
-          * ! Password Input here
-         **/ -->
-
-        <div>
-          <label for="password">Password</label>
-          <i class="fas fa-lock"></i>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password here"
-          />
-          <i class="fas fa-exclamation-circle failure-icon"></i>
-          <i class="far fa-check-circle success-icon"></i>
-          <div class="error"></div>
-        </div>
-
-        <button type="submit" id="submit">Submit</button>
-      </form>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validator.js"></script>
+</head>
+<body>
+<form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" name="name">
+        <div class="error" id="nameErr"></div>
     </div>
-  </body>
-  <script src="main.js"></script>
+    <div class="row">
+        <label>Email Address</label>
+        <input type="text" name="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Mobile Number</label>
+        <input type="text" name="mobile" maxlength="10">
+        <div class="error" id="mobileErr"></div>
+    </div>
+    <div class="row">
+        <label>Country</label>
+        <select name="country">
+            <option>Select</option>
+            <option>Australia</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+        </select> 
+        <div class="error" id="countryErr"></div>
+    </div>
+    <div class="row">
+        <label>Gender</label>
+        <div class="form-inline">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label> 
+        </div>
+        <div class="error" id="genderErr"></div>
+    </div>
+    <div class="row">
+        <label>Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+        </div>
+    </div>        
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
 </html>
