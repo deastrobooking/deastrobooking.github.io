@@ -1,13 +1,42 @@
+ <!--
+      JavaScript 6th Edition
+      Project 3
+
+      Author: Randolph Chabot 
+      Date:   3/30/2022
+
+      Filename: contact.html
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Simple HTML Form</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="validator.js"></script>
 </head>
-<body>
+
 <form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+    <header>
+        <img src="images/logo.png" alt="Cougar Logo" class="logo">
+        <p>
+            <a href="../home.html" class="responsive">Course Index</a>
+            <a href="index.html" class="responsive">3D Home</a>
+            <a href="page2.html" class="responsive">2D Graphing</a>
+        </p>
+        <p>
+            <a href="page1.html" class="responsive2">Addition</a>
+            <a href="page3.html" class="responsive2">Quadratic</a>
+            <a href="Test1.html" class="responsive2">Test</a>
+            <a href="Test2.html" class="responsive2">Test2</a>
+            <a href="contact.html" class="responsive2">Contact</a>
+        </p>
+    </header>
+
     <h2>Application Form</h2>
     <div class="row">
         <label>Full Name</label>
@@ -32,14 +61,14 @@
             <option>India</option>
             <option>United States</option>
             <option>United Kingdom</option>
-        </select> 
+        </select>
         <div class="error" id="countryErr"></div>
     </div>
     <div class="row">
         <label>Gender</label>
         <div class="form-inline">
             <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label> 
+            <label><input type="radio" name="gender" value="female"> Female</label>
         </div>
         <div class="error" id="genderErr"></div>
     </div>
@@ -48,12 +77,13 @@
         <div class="form-inline">
             <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
             <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
-            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
         </div>
-    </div>        
+    </div>
     <div class="row">
         <input type="submit" value="Submit">
     </div>
 </form>
 </body>
+
 </html>
