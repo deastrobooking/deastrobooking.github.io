@@ -1,4 +1,13 @@
+/*
+JavaScript 6th Edition
+Project 3
 
+Author: Randolph Chabot 
+Date:   3/30/2022
+
+Filename: contact.html
+
+*/
 
 body {
   font-size: 16px;
@@ -39,6 +48,15 @@ form {
   
   border: 1px solid #000000;
   color: #000;
+  
+}
+.responsive3 {
+  position: relative;
+  left: 45px;
+  display: inline-block;
+  color: #000;
+  border: 1px solid #000000;
+  
   
 }
 label {
