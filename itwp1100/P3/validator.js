@@ -1,3 +1,14 @@
+/*
+JavaScript 6th Edition
+Project 3
+
+Author: Randolph Chabot 
+Date:   3/30/2022
+
+Filename: contact.html
+
+*/
+
 // Defining a function to display error message
 function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;

@@ -21,6 +21,7 @@
 </head>
 
 <form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+    <!-- Navi -->
     <header>
         <img src="images/logo.png" alt="Cougar Logo" class="logo">
         <p>
@@ -28,6 +29,7 @@
             <a href="index.html" class="responsive">3D Home</a>
             <a href="page2.html" class="responsive">2D Graphing</a>
         </p>
+        <!-- Seperated into 2 Rows to Manage Center Alignment-->
         <p>
             <a href="page1.html" class="responsive2">Addition</a>
             <a href="page3.html" class="responsive2">Quadratic</a>
@@ -36,7 +38,7 @@
             <a href="contact.html" class="responsive2">Contact</a>
         </p>
     </header>
-
+    <!-- Name, Email, Mobile Number-->
     <h2>Application Form</h2>
     <div class="row">
         <label>Full Name</label>
@@ -53,6 +55,7 @@
         <input type="text" name="mobile" maxlength="10">
         <div class="error" id="mobileErr"></div>
     </div>
+    <!--Country Dropdown Box-->
     <div class="row">
         <label>Country</label>
         <select name="country">
@@ -64,6 +67,7 @@
         </select>
         <div class="error" id="countryErr"></div>
     </div>
+    <!-- Gender Row Radio Buttons -->
     <div class="row">
         <label>Gender</label>
         <div class="form-inline">
@@ -72,6 +76,7 @@
         </div>
         <div class="error" id="genderErr"></div>
     </div>
+    <!--Hobbies row style Checkbox-->
     <div class="row">
         <label>Hobbies <i>(Optional)</i></label>
         <div class="form-inline">
@@ -80,9 +85,17 @@
             <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
         </div>
     </div>
+    <!--Submit Button-->
     <div class="row">
         <input type="submit" value="Submit">
     </div>
+    <!--Footer HTML 5 Validation-->
+    <footer>
+        <p class="responsive3">
+            <a href= "https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2F6b%2Findex.html" class = "topnav" id = "ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
+            <a href="../home.html">Homepage</a>
+        </p>       
+    </footer>
 </form>
 </body>
 
