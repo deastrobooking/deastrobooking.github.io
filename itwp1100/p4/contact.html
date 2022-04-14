@@ -16,7 +16,7 @@
     <meta charset="UTF-8">
     <title>Project 3 Validation</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/vg-5000-master" type="text/css"/>
     <script src="validator.js"></script>
 </head>
 
@@ -99,14 +99,16 @@
         <script> 
             var	day = new Date().getDay();
                 week = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
-            
+                
             document.write(week[day]);
         </script>
         </div>
         
         <div class="date">
             <script>
-                document.write(new Date().getDate());
+                document.write(new Date().getMonth());
+                document.write("/", new Date().getDate());
+                document.write("/", new Date().getFullYear());
             </script>
         </div>      
     </footer>

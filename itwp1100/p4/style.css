@@ -103,20 +103,44 @@ input[type="submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background: #0165b6;
+  background: #000000;
 }
 
 .day {
-  color: #006dcc;
+  justify-content: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-align: center;
   border-radius: 5em;
-  border-bottom: 50px solid #555;
+  border-bottom: 50px solid rgb(0, 0, 0);
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   height: 0;
-  width: 125px;
+  width: auto;
+  font-family: 'VG5000Regular';
+  font-weight: normal;
+  font-style: normal;
+  
+  
+  
+  
+  justify-content: center;
+  
 }
 
 .date {
+  vertical-align: middle;
   color: #000000;
   border-radius: 5em;
+  font-family: 'VG5000Regular';
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  
+  border-radius: 5em;
+  border-top: 50px solid rgb(0, 0, 0);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 25px solid transparent;
+  justify-content: center ;
 }
