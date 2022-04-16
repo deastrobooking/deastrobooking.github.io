@@ -3,7 +3,7 @@
       Project 3
 
       Author: Randolph Chabot 
-      Date:   3/30/2022
+      Date:   4/15/2022
 
       Filename: contact.html
 
@@ -20,7 +20,7 @@
     <script src="validator.js"></script>
 </head>
 
-<form name="contactForm" onsubmit="return validateForm()" action="confirmation.php" method="post">
+<form name="contactForm" action="mailto:chabotr523@macomb.edu" method="post" enctype="text/plain">
     <!-- Navi -->
     <header>
         <img src="images/logo.png" alt="Cougar Logo" class="logo">
@@ -42,23 +42,23 @@
     <h2>Application Form</h2>
     <div class="row">
         <label>Full Name</label>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
         <div class="error" id="nameErr"></div>
     </div>
     <div class="row">
         <label>Email Address</label>
-        <input type="text" name="email">
+        <input type="email" name="email" required>
         <div class="error" id="emailErr"></div>
     </div>
     <div class="row">
         <label>Mobile Number</label>
-        <input type="text" name="mobile" maxlength="10">
+        <input type="text" name="mobile" maxlength="10" required>
         <div class="error" id="mobileErr"></div>
     </div>
     <!--Country Dropdown Box-->
     <div class="row">
         <label>Country</label>
-        <select name="country">
+        <select name="country" required>
             <option>Select</option>
             <option>Australia</option>
             <option>India</option>
@@ -71,8 +71,8 @@
     <div class="row">
         <label>Gender</label>
         <div class="form-inline">
-            <label><input type="radio" name="gender" value="male"> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
         </div>
         <div class="error" id="genderErr"></div>
     </div>
@@ -80,14 +80,14 @@
     <div class="row">
         <label>Hobbies <i>(Optional)</i></label>
         <div class="form-inline">
-            <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
-            <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
-            <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+            <label><input type="checkbox" name="hobbies[]" value="sports" > Sports</label>
+            <label><input type="checkbox" name="hobbies[]" value="movies" > Movies</label>
+            <label><input type="checkbox" name="hobbies[]" value="music" > Music</label>
         </div>
     </div>
     <!--Submit Button-->
     <div class="row">
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" required>
     </div>
  
     <footer>
@@ -110,11 +110,17 @@
                 document.write("/", new Date().getDate());
                 document.write("/", new Date().getFullYear());
             </script>
-        </div>      
+        </div> 
+        <div>
+            <script>
+
+            </script>
+        </div>     
     </footer>
 </form>
 </body>
 
 </html>
 
+<!--Reference_________________________________________________________________________-->
 <!--https://www.tutorialrepublic.com/codelab.php?topic=javascript&file=form-validation-->
