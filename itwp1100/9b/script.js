@@ -9,12 +9,12 @@
 	  */
 	  
 	  "use strict";
-	  
+	  // Declaring function that saves username. ___________________________________________
 	  function processCookie() {
 		  document.cookie = "userame= " +
 		  document.getElementById("usernameinput").value;
 	  }
-	  
+	  //____________________________________________________________________________________
 	  function populateInfo() {
 		  if (document.cookie) {
 			  var uname = document.cookie;
@@ -22,7 +22,7 @@
 			  document.getElementById("usernameinput").value = uname;
 		  }
 	  }
-	  
+	  //_____________________________________________________________________________________
 	  function handleSubmit() {
 		  if (evt.preventDefault) {
 			  evt.preventDefault();
@@ -32,7 +32,7 @@
 		  processCookie();
 		  document.getElementByTagName ("form")[0].submit();
 	  }
-	  
+	  //____________________________________________________________________________________
 	  function createEvemtListener() {
 		  var loginForm = document.getElementByTagName("form")[0];
 		  if (loginForm.addEventListener) {
@@ -42,7 +42,7 @@
 			  loginForm.attachEvent("onsubmit", handleSubmit);
 		  }
 	  }
-
+	  //___________________________________________________________________________________
 	  function setUpPage() {
 		  populateInfo();
 		  createEventListener();
