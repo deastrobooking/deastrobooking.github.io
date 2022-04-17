@@ -1,0 +1,180 @@
+ <!--
+      JavaScript 6th Edition
+      Project 3
+
+      Author: Randolph Chabot 
+      Date:   4/15/2022
+
+      Filename: contact.html
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Mi_Garden</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+	<script src="modernizr.custom.05819.js"></script> <!-- link modernizer to every page -->
+</head>
+
+<body>
+	<!-- header area -->
+	<div id="header">	
+		<h1><span>M</span>i <span>V</span>eggie <span>G</span>arden</h1>
+	</div>
+	
+		<!-- top navigation area for every page -->
+	<div id="topnav"> <!-- styles in main.css -->
+			<a href="index.html" class="topnavbar" title="home page">Home</a>
+			<a href="page2-Size.html" class="topnavbar" title="page2 size">SizeMatters</a>
+			<a href="page3-Seeds.html" class="topnavbar" title="page3 seeds">Seeds-Vs-Plants</a>
+			<a href="page4-Planting.html" class="topnavbar" title="page4 planting">Planting</a>
+			<a href="page5-Swap.html" class="topnavbar" title="page5 plantSwap">Plant Swap</a>
+			<a href="../../home.htm" class="topnavbar" title="course homepage">CourseHomePg</a>
+	</div>
+	<!-- NEW for project4 - add today's date -->
+	
+	<p id="todaysdate" style="text-align: center"></p><br>
+		<p id="greeting" style="text-align: center"></p>
+		<br><br>
+	<!-- images -->
+	<div id="imagecontainer">
+		<img src="images/springzuke.jpg" class="picgroup" title="Spring Zucchini" alt="Zucchini_in_Spring" height="200" width="300">
+		<img src="images/summertomato.jpg" class="picgroup" title="Summer Tomato" alt="Tomatoes_in_Summer" height="200" width="300">
+		<img src="images/fallpumpkin.jpg" class="picgroup" title="Fall Pumpkin" alt="Pumpkins_in_Fall" height="200" width="300">  
+	</div>
+	<!-- main content -->
+	<div id="wrapper-content">
+	  
+	  <div id="leftcontent">
+		<p class="paragraphtitle">More gardening ideas and tips</p>
+		<a href="https://www.canr.msu.edu/home_gardening/vegetables/" target="blank" title="msu home gardening_vegetables">MSU Vegetable Gardening</a><br>
+		<a href="https://www.hgtv.com/outdoors/landscaping-and-hardscaping/14-simple-gardening-tips-and-tricks" target="blank" title="HGTV Gardening Tips">HGTV Simple Gardening Tips</a><br>
+		<a href="https://www.self.com/story/gardening-tips" target="blank" title="self.com story/gardenblog">Self.com Garden Tips</a><br>
+		<a href="https://www.ufseeds.com/michigan-vegetable-planting-calendar.html" target="blank" title="Urban Farmer MI Planting Calendar">MI Planting Calendar</a><br>	
+	  </div>
+		
+	  <div id="rightcontent">	
+		<p class="paragraphtitle">My favorite season in Michigan is Garden season</p>
+		<p class="paragraphcontent">
+		Of course, there isn't an official "Garden" season in Michigan. If it were a season,
+		it might start in May (March for some that start seeds indoors) and end when your
+		last plant expires. Each year, I get different results and length of harvest time
+		depending on the weather. Usually, before the first frost (generally sometime in late September),
+		I will harvest every tomato that has the slightest bit of color. The frost won't
+		necessarily kill the plants, but the cold generally zaps the flavor of the fruit -- but
+		that's a different website. See <a href="https://www.gardeningknowhow.com/edible/vegetables/tomato/harvest-time-for-tomatoes.htm" target="blank" title="when to harvest tomatoes">Harvest Time For Tomatoes</a></p>
+		<p class="paragraphcontent">
+		I suppose I should include the following disclaimer:
+		<em>I am not now, nor have I ever been, a professional gardener.</em>
+		</p>
+		<p class="paragraphcontent">
+		My goal is to share a few things that I've learned about growing a few different
+		types of vegetables over the past decade or two. I consider myself to be a hobbyist
+		gardener -- I don't get too intense about it. For me, gardening is peaceful work
+		with delicious return on investment -- there usually is quite an investment.
+		</p>
+	  </div>
+	</div>
+	<p class="clear"></p>
+	<!-- NEW for Project4 - add Feedback Form -->
+	
+	<form id="feedback" name="feedback" method="post" action="emailto:" enctype="text/plain">
+	      <div id="errorText"></div>
+		  <p class="paragraphtitle">Give Us Your Feedback!<br>
+	      </p>
+	  <!--  User Info Portion message/error handling -->
+		
+		<fieldset id="FBackform">
+            <label for="fname">First name: </label>
+            <input type="text" required="required" id="fname" name="fname" size="20" placeholder="required" autofocus><br><br>
+           	<label for="lname">Last name: </label>
+            <input type="text" required="required" id="lname" name="lname" size="30" placeholder="required" autofocus><br><br>
+			<label for="email">Email: </label>
+			<input type="email" required="required" id="email" name="email" size="35" placeholder="required" autofocus><br><br>
+			<p id="emailError" class="errorMsg"></p>
+			<label for="phone">Phone:</label>
+			<input type="tel" required="required" id="phone" name="phone" size="12" placeholder="111-222-3333" autofocus><br><br>
+			<p id="phoneError" class="errorMsg"></p>
+		</fieldset>
+			
+	       <p class="paragraphtitle">Which topics would you like to see more of?</p>	
+	    <fieldset id="topicchoice">
+            <input type="checkbox" name="feedbackchoice" id="moreveggies" value="moreveggies">
+            <label for="moreveggies" class="formcontrol2">More About Other Vegetables</label><br>
+            <input type="checkbox" name="feedbackchoice" id="insects" value="insects">
+            <label for="insects" class="formcontrol2">How to Control Destructive Insects</label><br>
+            <input type="checkbox" name="feedbackchoice" id="critters" value="critters">
+            <label for="critters" class="formcontrol2">Keeping Critters Out</label><br>
+			<input type="checkbox" name="feedbackchoice" id="containers" value="containers">
+            <label for="containers" class="formcontrol2">Show More Container Gardens</label><br><br>
+            <input type="checkbox" name="feedbackchoice" id="otherfb" value="otherfb">
+            <label for="otherfb" class="formcontrol2">Other</label><br>
+			<label for="describeother" class="formcontrol2">Describe Other:</label>
+			<input type="text" id="describeother" placeholder="Enter other topic" size="40" autofocus>
+            <br><br>
+			<input id="custom" name="customMsg" type="checkbox" />
+			<label for="custom">More Feedback: </label>
+			<textarea id="customFBtext" name="CustomText" placeholder="Share other requests here" autofocus></textarea>
+			<div class="errorText"></div>
+		</fieldset>
+	 	
+	<!-- submit button for UserInfo form -->	
+		<fieldset id="FBackbutton">
+            <button type="submit" id="submit" class="fbbutton">Submit</button>&nbsp;&nbsp
+            <button type="reset" id="reset" class="fbbutton">Reset</button>
+		</fieldset>
+	</form>
+	
+	<footer class="footer">
+	<!-- bottom nav with validation -->
+		<div id="bottomnav"> <!-- styles in main.css -->
+			<a href="index.html" class="bottomnavbar" title="home page">Home</a>
+			<a href="page2-Size.html" class="bottomnavbar" title="page2 size">SizeMatters</a>
+			<a href="page3-Seeds.html" class="bottomnavbar" title="page3 seeds">Seeds-Vs-Plants</a>
+			<a href="page4-Planting.html" class="bottomnavbar" title="page4 planting">Planting</a>
+			<a href="page5-Swap.html" class="bottomnavbar" title="page5 plantSwap">Plant Swap</a>
+			<a href="../../home.htm" class="bottomnavbar" title="course homepage">CourseHomePg</a>
+			<a href="http://validator.w3.org/check?uri=referer" class="bottomnavbar" title="HTML5 Validation - W3C">HTML5 Validation</a>
+		</div>
+		
+	</footer>
+	
+	<script>
+	"use strict";
+	//add today's date with js Date class
+	var today = new Date(); //creates new Date object containing date and time provided by device
+	//basic method to get current date
+	document.querySelector("#todaysdate").innerHTML = today; //assigns var today to the id 'todaysdate'
+	var dayNum = today.getDay();
+	var weekDay;
+	var greeting;
+	if (dayNum === 0) {
+	   weekDay = "Sunday";
+	} else if (dayNum === 1) {
+	   weekDay = "Monday";
+	} else if (dayNum === 2) {
+	   weekDay = "Tuesday";  
+	} else if (dayNum === 3) {
+	   weekDay = "Wednesday";
+	} else if (dayNum === 4) {
+	   weekDay = "Thursday";
+	} else if (dayNum === 5) {
+	   weekDay = "Friday";   
+	} else if (dayNum === 6) {
+	   weekDay = "Saturday";
+	}  
+	greeting = ("Happy " + weekDay + "!");
+    document.querySelector("#greeting").innerHTML = greeting;
+//global variables for validation
+	var formValidity = true;
+//validate fname, lname
+
+ </script>
+</body>
+
+</html>
+	
+	   

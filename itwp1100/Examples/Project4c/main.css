@@ -1,0 +1,341 @@
+/*  ITWP1100 - Project3
+    Filename: main.css
+	Author: Julie Weber
+	Date: 	3-28-22
+*/
+
+/* css reset */
+*{margin:0;padding:0;border:0;outline:0;font-size: 100%;font-style: normal;font-weight: normal;line-height: 1;vertical-align:baseline;text-decoration:none;}
+
+
+/* body basic styles */
+body {
+	background: #f7f7f7;
+	font-family: Verdana, Helvetica, Arial, 'sans-serif';
+	margin: 10px;
+}
+
+/* header bar */
+#header {
+	display: block;
+	background-color: #4fa891; /* deep teal green */
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	font-family: 'brush script MT', 'bradley hand', cursive;
+	font-size: 5em;
+	color: white;
+	border: 2px solid black;
+	text-shadow: 4px 4px black;
+	max-width: 98%;
+	font-weight: bold;
+}
+
+h1 span {
+	font-size: 135%;
+}
+h3 {
+	color: #4fa891; /* deep teal green */
+	font-size: 110%;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+#SwapHeading {
+	color: #4fa891; /* deep teal green */
+	text-align: center;
+	display: block;
+	padding: 10px;
+	font-size: 1.5em;
+	justify-content: center;
+}
+.heading4 {
+	text-align: center;
+	display: block;
+	line-height: 1.5;
+	
+}
+
+/* top navigation */
+#topnav {
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	display: inline-block;
+	justify-content: center;
+	position: relative;
+	line-height: 2;
+}
+.topnavbar {
+	margin-right: 2%;
+	color: white;
+	background: #cd853f;
+	padding: 5px;
+	font-weight: bold;
+	text-shadow: 2px 2px black;
+	border-radius: 10%;
+}
+
+/* centers images horizontally */
+#imagecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+	width: 80%;
+	background-color: beige;
+}
+
+.picgroup {
+	position: relative;
+	padding: 1%;
+	margin: auto;
+	width: auto;
+}
+
+#imagecontainer2 { /* for narrow picture group */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+	width: 60%;
+	background-color: beige;
+}
+
+.picgroup2 { /* for narrow picture group and groups with only 2 */
+	position: relative;
+	padding: 1%;
+	margin: auto;
+	width: auto;
+}
+.leftcontentpic {
+	display: flex;
+	margin: auto;
+	width: 80%;
+	justify-content: center;
+}
+/*content section */
+#wrapper-content { 
+	display: flex;
+	margin: auto;
+	width: 100%;
+	justify-content: center;
+}
+
+#leftcontent {
+	background-color: beige;
+	margin: 10px;
+	padding: 20px;
+	display: block;
+	border: 2px solid #cd853f; /*peru - shade of brown */
+	max-width: 30%;
+	float: left;
+	line-height: 2;
+}
+
+#rightcontent {
+	background-color: beige;
+	margin: 10px;
+	padding: 20px;
+	display: block;
+	border: 2px solid #cd853f; /*peru - shade of brown */
+	max-width: 60%;
+	float: left;
+	text-align: justify;
+	line-height: 2;
+	position: relative;
+}
+
+.paragraphtitle {
+	color: #4fa891; /* deep teal green */
+	font-size: 110%;
+	font-weight: bold;
+	text-align: center;
+	display: block;
+	margin-bottom: 2%;
+	position: relative;
+	line-height: 1.3;
+}
+.paragraphcontent {
+	line-height: 1.2;
+	margin-bottom: 1%;
+	font-family: garamond, 'times new roman', serif;
+	font-size: 125%;
+}
+.clear {
+	clear: both;
+}
+
+/* form 1 calculates space */
+form {
+   background: beige;
+   border: 5px solid #4fa891;
+   padding: 10px;
+   max-width: 70%;
+   margin: auto;
+}
+fieldset {
+   padding: 1em;
+   background: inherit;
+   border: none;
+   text-align: center;
+}
+   
+input {
+   font-size: 1em;
+   text-align: left;
+   padding: 5px;
+   }
+input:focus {
+   background: #e3d5ba;
+}
+label {
+   display: inline-block;
+   position: relative;
+  
+}
+
+
+.formcontrol {
+	text-align: left;
+	font-weight: bold;
+}
+button {
+   padding: 10px;
+   border: 1px solid green;
+}
+/* form 2 user info */
+#emailform {
+	display: block;
+	position: relative;
+	text-align: left;
+}
+#emailform2 {
+	display: block;
+	position: relative;
+	text-align: left;
+}
+
+/* ids for feedback form custom text box */
+
+#feedback {
+	display: block;
+	text-align: left;
+	line-height: 1.3;
+}
+#FBackform {
+	display: block;
+	text-align: left;
+	line-height: 1.3;
+}
+
+#FBackbutton {
+	display: block;
+	position: relative;
+	text-align: center;
+}
+.fbbutton {
+	border-radius: 5px;
+	background-color: #4fa891; /* deep teal green */
+	color: white;
+	font-weight: bold;
+}
+#topicchoice {
+	display: block;
+	position: relative;
+	text-align: left;
+	line-height: 1.3;
+	margin-right: 5px;
+	
+}
+#customFBtext {
+	font-family: arial, sans-serif;
+	font-size: 1em;
+	height: 3em;
+	padding: 5px;
+	
+}
+
+/* ids for joingroup form */
+.formcontrol2 {
+	display: inline-block;
+	text-align: left;
+	margin-right: 15px;
+	line-height: 1.3;
+}
+
+#groupform {
+	display: block;
+	text-align: left;
+	line-height: 1.3;
+}
+#joingroupform {
+	display: block;
+	text-align: left;
+	line-height: 1.3;
+}
+
+#groupbutton {
+	display: block;
+	position: relative;
+	text-align: center;
+		
+}
+#groupboxchoice {
+	display: block;
+	position: relative;
+	text-align: left;
+	line-height: 1.3;
+	margin-right: 5px;
+	
+}
+#groupmessage { 
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+/* links */
+a:link, a:visited {
+   text-decoration: none;
+ }
+
+a:hover {
+   text-decoration: none;
+   color: green;
+   text-shadow: none;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* footer */
+
+.footer {
+	background-color: #4fa891;
+	display: block;
+	padding: 15px;
+	margin: 10px;
+}
+
+/* bottom navigation */
+#bottomnav {
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+	display: inline-block;
+	justify-content: center;
+	position: relative;
+	line-height: 2;
+}
+.bottomnavbar {
+	margin-right: 2%;
+	color: brown;
+	padding: 5px;
+	border-radius: 10%;
+	text-decoration: underline;
+}	

@@ -1,0 +1,32 @@
+/* CSS Document: basic style sheet for web project 1 */
+
+#wrapper {
+	margin: 20px auto;
+	width: 100%;
+}
+
+/*a class that makes larger images responsive*/
+img.responsive {
+	max-width: 600px; /* sets the max image width to 600 pixels */
+	height: auto;
+	width: 100%
+}
+
+/* adds 10 pixels of padding around the header element */
+header {
+	padding: 10px;
+}
+
+/* adds 10 pixels of padding around the nav element and displays a 1 pixel solid black border around the nav element */
+nav {
+	padding: 10px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+/* adds 10 pixels of padding around the footer element and creates a 1 pixel solid black border above the footer, aligns the footer text to the center */
+footer {
+	padding: 10px;
+	border-top: 1px solid #000;
+	text-align: center;
+}

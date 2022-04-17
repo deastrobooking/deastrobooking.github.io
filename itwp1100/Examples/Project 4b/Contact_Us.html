@@ -1,0 +1,195 @@
+ <!--
+      JavaScript 6th Edition
+      Project 3
+
+      Author: Randolph Chabot 
+      Date:   4/15/2022
+
+      Filename: contact.html
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+<!--In the form on this webpage you can enter your information to contact our site-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- add external CSS file -->
+<link rel="stylesheet" type="text/css" href="project4.css">
+<style>
+img {
+display:inline-block;
+border:2px solid #000000;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+}
+</style>
+<script src="js/modernizr.custom.05819/modernizr.custom.05819.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+
+<nav>
+<a href="../home.htm">Back to Course Home Page</a>
+</nav>
+
+<nav>
+<script src="js/header_nav.js"></script>
+</nav>
+
+<div>
+<header>
+<h2 style="text-align:center;">Contact our Site for more information</h2>
+
+</header>
+</div>
+   
+   <article>
+   <h4> Information Request </h4>
+   <form id="contactform" name="contact form" action="mailto:bgrubbs@comcast.net?subject=request" method="POST" enctype="text/plain" >
+<section>
+<h4>Please complete the following information about yourself below.</h4>
+<p> This website has been created for helpful information for anyone interested in the sites in Germany and information related to travel there to see these sites.  We hope you found our site useful and continue to visit us again in the future!</p>
+<p> Information is periodically updated to better serve users of this site but currency calculations and other information can change at varying rates and this information could be out of date when you visit our page.  Please make note if you see any information that needs to be updated and we will take care of this to enhance the website users experience.</p>
+<p> If you have any questions to ask before visiting Germany, then please enter and complete answering this form below. Leaving any fields that are left empty will produce an error message and a reminder for you to fill them.  Age is defaulted to allow users to not disclose this private information if they choose not to.   We use this information to further enhance our site options for the future.</p>
+<p> All information entered and sent to our site is kept confidential and not shared with any other companies or individuals. </p>
+<fieldset id="cinfo"><legend> <strong>Your Information</strong></legend>
+<table style="border:1px solid #000000; border-spacing:2px; margin:auto; width:591px;">
+<tr>
+<td> Today's Date: </td>
+<td><input type="text" name="frmDateReg" required id="frmDate" value=""></td>
+</tr>
+<tr>
+<td>First Name:</td>
+<td><input type="text" name="First Name" id="firstname" size="15" tabindex="1" placeholder="First Name" required="required" autofocus="autofocus"></td>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td><input type="text" name="Last Name" id="lastname" size="20" tabindex="2" placeholder="Last Name" required="required"></td>
+</tr>
+<tr>
+<td>Email:</td>
+<td><input type="email" name="Email Address" id="email" size="30" tabindex="3" placeholder="Email Address" required="required"></td>
+</tr>
+<tr>
+<td>Phone Number:</td>
+<td><input type="tel" name="Phone Number" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="30" tabindex="4" placeholder="Phone Number" required="required"></td>
+</tr>
+<tr>
+<td>I am:</td>
+<td><input type="radio" name="Sex" id="CustSexM" value="male" tabindex="5">Male &nbsp; <input type="radio" name="Sex" id="CustSexF" value="female" tabindex="5">Female</td>
+</tr>
+<tr>
+<td>Age:</td>
+<td><input type="range" name="Age" id="range" value="0" min="0" max="100" step="1" tabindex="6" ><output name="x" for="range"></output> Years Old </td>
+</tr>
+</table>
+</fieldset>
+</section>
+<section>
+<h4>Please indicate information you wish to see. Check all that apply.</h4>
+<fieldset><legend><strong>Info Selection</strong></legend>
+<br>
+<label>Hotel: <input type="checkbox" id="hotel" name="genre" value="Hotel" tabindex="7"></label>
+<label>Car Rental: <input type="checkbox" id="car" name="genre" value="Car Rental" tabindex="8"></label>
+<label>Airlines: <input type="checkbox" id="air" name="genre" value="Airlines" tabindex="9"></label>
+<label>Transportation: <input type="checkbox" id="trans" name="genre" value="Transportation" tabindex="10"></label>
+<label>Travel Pamphlets: <input type="checkbox" id="travel" name="genre" value="Travel Pamphlets" tabindex="11"></label>
+<label>Tour Information: <input type="checkbox" id="tour" name="genre" value="Tour Information" tabindex="12"></label>
+<label>Cultural Information: <input type="checkbox" id="cult" name="genre" value="Cultural Information" tabindex="13"></label>
+</fieldset>
+</section>
+
+
+<section>
+<h4>Please provide any additional information needed.</h4>
+<fieldset><legend><strong>Additional information request</strong></legend>
+<br>
+<label>Do you have any other questions regarding travel to Germany?</label> 
+<p><textarea name="Comments" id="UserComments" cols="60" rows="3" tabindex="15" placeholder="Comments or questions here" required></textarea></p>
+</fieldset>
+</section>
+
+<section>
+<h4>Submit or Reset the form below.</h4>
+<fieldset><legend><strong>Send It!</strong></legend>
+<br>
+<input id="submit" type="button" value="Submit" onclick="Submitted()" tabindex="16">
+&nbsp;
+<input id="reset" type="reset" value="Reset" tabindex="17">
+</fieldset>
+</section>
+<p id="texto"></p>
+</form>
+</article>
+  
+<script>
+function validateRequired() {
+	try {
+	   var fname = document.getElementById("firstname").value;
+	   var lname = document.getElementById("lastname").value;
+	   var email = document.getElementById("email").value;
+	   var phone = document.getElementById("phone").value;
+	   var genderM = document.getElementById("CustSexM");
+	   var genderF = document.getElementById("CustSexF");
+	   var age = document.getElementById("range").value;
+	   var hotel = document.getElementById("hotel");
+	   var car = document.getElementById("car");
+	   var air = document.getElementById("air");
+	   var trans = document.getElementById("trans");
+	   var travel = document.getElementById("travel");
+	   var tour = document.getElementById("tour");
+	   var cult = document.getElementById("cult");
+	   var com = document.getElementById("UserComments").value;
+	   var pregExp = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+	   var phonem = !phone.match(pregExp);
+	   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+	   var eform = !email.match(mailformat);
+	   
+        if (fname == "") throw "Please enter your first name.";
+		if (lname == "") throw "Please enter your last name.";
+		if (email == "") throw "Please enter email.";
+		if (phone == "") throw "Please enter phone number.";
+		if (age == "") throw "Please enter age.";
+		if ((genderM.checked == false) && (genderF.checked == false)) throw "Please enter gender.";
+		if ((hotel.checked == false) && (car.checked == false) && (air.checked == false) && (trans.checked == false) && (travel.checked == false) && (tour.checked == false) && (cult.checked == false)) throw "Please select information requested.";
+		if (phonem) throw "Please enter phone number in format 555-555-5555";
+		if (eform) throw "Please enter email address with vaild @ format.";
+		if (com == "") throw "Please enter a comment for this section, so we can provide any further help with any of your questions.";
+		}
+	catch(err) {
+      window.alert(err)
+	  document.getElementById('texto').innerHTML = "";
+	  return false;
+	}
+}
+function getDate(){
+   var todaydate = new Date();
+   var day = todaydate.getDate();
+   var month = todaydate.getMonth() + 1;
+   var year = todaydate.getFullYear();
+   var datestring = month + "/" + day + "/" + year;
+   document.getElementById("frmDate").value = datestring;
+  } 
+getDate();
+function Submitted () {
+        document.getElementById('texto').innerHTML = "Thank you for your inquiry.  We will respond within 10 days of your inquiry.";
+}
+	document.getElementById("submit").addEventListener("click", validateRequired, false);
+</script>
+
+<footer>
+<script src="js/footer_nav.js"></script>
+<p style="text-align:center;">This site is for educational purposes only.  For any questions related to this website, please email Brian Grubbs at <a href="mailto:grubbsb607@macomb.edu">grubbsb607@macomb.edu</a>.</p>
+</footer>
+</div>
+
+<p>
+<a href="http://validator.w3.org/check?url=referer" title="HTML5 Validation">HTML5 Validation</a>
+</p>
+</body>
+</html>
