@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <!--lINK TO JS FILE _________________________________________________________________________-->
     <script src="validator.js"></script>
+    <!--Adding Vue-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 </head>
 <!--CREATING FORM TYPE SETTING Action mailto: enctype plain _____________________________________-->
 
@@ -69,7 +73,7 @@
         <input type="text" name="mobile" maxlength="10" required placeholder="1112223333">
         <div class="error" id="mobileErr"></div>
     </div>
-    
+
     <!--Country Dropdown Box-->
     <div class="row">
         <label alt = "Country">Country</label>
@@ -98,12 +102,35 @@
             <label><input type="checkbox" name="hobbies[]" value="sports" > Sports</label>
             <label><input type="checkbox" name="hobbies[]" value="movies" > Movies</label>
             <label><input type="checkbox" name="hobbies[]" value="music" > Music</label>
+            <label><input type="checkbox" name="hobbies[]" value="music" > Art</label>
+            <label><input type="checkbox" name="hobbies[]" value="music" > Science</label>
         </div>
     </div>
+   <!-- Comments Section HTML ___________________________________________________________________-->
+    <div class="row">
+        <div class="container2">
+        <div class="col-6">
+            <div class="comment">
+        <p v-for="items in item" v-text="items"></p>
+            </div><!--End Comment-->
+            </div><!--End col -->
+            </div><!-- End row -->
+        <div class="row">
+        <div class="col-6">
+        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        </div><!-- End col -->
+        </div><!--End Row -->
+    </div><!--End Container -->                                      
+                  
     <!--Submit Button-->
     <div class="row">
         <input type="submit" value="Submit" required>
     </div>
+    <div class="row">
+        <input type="reset" value="Reset" required>
+    </div>
+ 
  
     <footer>
         <p class="responsive3">
