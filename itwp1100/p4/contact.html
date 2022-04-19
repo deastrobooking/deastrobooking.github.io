@@ -76,8 +76,8 @@
 
     <!--Country Dropdown Box-->
     <div class="row">
-        <label alt = "Country">Country</label>
-        <select name="country" required>
+        <label>Country</label>
+        <select name="country" required size="5">
             <option>Select</option>
             <option>Australia</option>
             <option>India</option>
@@ -88,10 +88,10 @@
     </div>
     <!-- Gender Row Radio Buttons -->
     <div class="row">
-        <label alt="Gender">Gender</label>
+        <label>Gender</label>
         <div class="form-inline">
-            <label><input type="radio" name="gender" value="male" required alt ="Male"> Male</label>
-            <label><input type="radio" name="gender" value="female" required alt="Female"> Female</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
         </div>
         <div class="error" id="genderErr"></div>
     </div>
@@ -111,24 +111,24 @@
         <div class="container2">
         <div class="col-6">
             <div class="comment">
-        <p v-for="items in item" v-text="items"></p>
+        
             </div><!--End Comment-->
             </div><!--End col -->
             </div><!-- End row -->
         <div class="row">
         <div class="col-6">
-        <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
-            <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        <textarea class="input" placeholder="Write a comment" v-model = "newItem" onkeyup="addItem()"></textarea>
+            <button onclick="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
         </div><!-- End col -->
         </div><!--End Row -->
     </div><!--End Container -->                                      
                   
     <!--Submit Button-->
     <div class="row">
-        <input type="submit" value="Submit" required>
+        <input type="submit" value="Submit">
     </div>
     <div class="row">
-        <input type="reset" value="Reset" required>
+        <input type="reset" value="Reset">
     </div>
  
  
@@ -159,6 +159,7 @@
         <div class="clock">
             <!--HTML For Clock App ______________________________________________________________-->
             <article class="container fade-in">
+                <h6>Clock Work in Progress</h6>
                 
                 <section class="outer-circle">
                   <svg class="segments" viewBox="0 0 320 320">
