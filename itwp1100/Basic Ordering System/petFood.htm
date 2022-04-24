@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Pet Food</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/modernizr.custom.05819.js"></script>
+</head>
+<body>
+    <header id="header"><p style="color:green"><strong>Pet Food</strong></p></header>
+
+    <div id="container">
+        <nav id="notleft" class="column">
+            <ul>
+                <li><a href="petFood.htm"><br><strong>Pet Food</strong></a></li>
+                <li><a href="ingredients.htm"><br><strong>Ingredients</strong></a></li>
+                <li><a href="diseases.htm"><br><strong>Nutrition Diseases</strong></a></li>
+                <li><a href="healthyFood.htm"><br><strong>Healthy Pet Food</strong></a></li>
+                <li><a href='../home.htm'><br><strong>Back to Course Homepage</strong></a>
+                <li>
+            </ul>
+		
+        </nav>
+        <main id="center" class="column">
+            <article>
+                <h1 style="color:green">Pet Food</h1>
+                <table>
+                    <tr>
+                        <td><img src="images/food1.jpg" alt="Dog Food" title="Dog Food" height="200" width="250"></td>
+                        <td><img src="images/catFood.jpg" alt="Cat Food" title="Cat Food" height="200" width="250"></td>
+                        <td><img src="images/blueFood.jpg" alt="Blue" title="Blue" height="200" width="250"></td>
+                    </tr>
+                </table>
+                <p style="font-size:16px;">
+                    <script src="js/petFood.js"></script>
+                    <br>
+                </p>
+            </article>
+        </main>
+        <div id="right" class="column">
+            <h3 style="color:green">Pet Food Serving Calculator</h3>
+            <article>
+                <h4 style="color:green">Pet Type</h4>
+                <form>
+                    <input type="radio" name="animal" value="cat" id="cat"><span class="animalName"> Cat</span><br><br>
+                    <input type="radio" name="animal" value="dog" id="dog"><span class="animalName"> Dog</span><br><br>
+
+                    <h4 style="color:green">Enter the weight(lbs) of your cat:</h4>
+
+                    <select name="catWeight" id="catWeight">
+						<option value="0">None</option>
+                        <option value="5">5-10 lbs</option>
+                        <option value="10">10-15 lbs</option>
+                        <option value="15">15-20 lbs</option>
+                        <option value="20">20-25 lbs</option>
+                        <option value="25">25-30 lbs</option>
+                    </select>
+
+                    <h4 style="color:green">Enter the weight(lbs) of your dog:</h4>
+                    <select name="dogWeight" id="dogWeight">
+						<option value="0">None</option>
+                        <option value="10">10 lbs or less</option>
+                        <option value="20">10-20 lbs</option>
+                        <option value="30">20-30 lbs</option>
+                        <option value="40">30-40 lbs</option>
+                        <option value="50">40-50 lbs</option>
+                        <option value="60">50-60 lbs</option>
+                        <option value="70">60-70 lbs</option>
+                        <option value="80">70-80 lbs</option>
+                        <option value="90">80 lbs or larger</option>
+                    </select><br><br>
+
+                    <input type="button" id="submit" value="Submit"/>
+					<input type="reset" id="reset2" value="Reset"/>
+					<h3 style="color:green">Email Results</h3>
+					</form>
+					<form action="mailto:daughertya015@macomb.edu" method="post" enctype="text/plain">
+						<h4 style="color:green">Name:</h4>
+					<input  type="text" name="name" ><br>
+						<h4 style="color:green">Email:</h4>
+					<input type="text" name="mail"><br>
+
+					<input type="submit" value="Send">
+					
+                </form>
+                <div id="petFoodAmount"></div>
+            </article>
+
+            <script>
+			   // calculate amount of food
+                function petFoodCalc() {
+                    var animal;
+
+                    if (document.getElementById("cat").checked) {
+                        animal = "cat";
+                    } else if (document.getElementById("dog").checked) {
+                        animal = "dog";
+                    }
+
+                    var catFood;
+                    var dogFood;
+					//options for cat
+                    if (animal == "cat") {
+                        if (catWeight[catWeight.selectedIndex].value == 5) {
+                            catFood = "1/4 to 1/3";
+                        } else if (catWeight[catWeight.selectedIndex].value == 10) {
+                            catFood = "3/8 to 1/2";
+                        } else if (catWeight[catWeight.selectedIndex].value == 15) {
+                            catFood = "1/2 to 3/4 cup";
+                        } else if (catWeight[catWeight.selectedIndex].value == 20) {
+                            catFood = "3/4 to 1";
+                        } else if (catWeight[catWeight.selectedIndex].value == 25) {
+                            catFood = "1 to 1 & 1/4";
+                        } else {
+                            animal = 'empty';
+                        }
+                        petFoodAmount = document.getElementById("petFoodAmount").innerHTML = '<p class="result">For your ' + animal + ' the recommended amount of dry food is ' + catFood + ' cups per day.</p>';
+                    //options for dog
+                        } else if (animal == "dog") {
+                        if (dogWeight[dogWeight.selectedIndex].value == 10) {
+                            dogFood = "1/4 to 3/4";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 20) {
+                            dogFood = "3/4 to 1";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 30) {
+                            dogFood = "1 to 1 & 1/4";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 40) {
+                            dogFood = "1 & 1/4 to 1 & 1/2";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 50) {
+                            dogFood = "1 & 1/2 to 1 & 3/4";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 60) {
+                            dogFood = "1 & 3/4 to 2";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 70) {
+                            dogFood = "2 to 2 & 1/4";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 80) {
+                            dogFood = "2 & 1/4 to 2 & 1/2";
+                        }
+                        else if (dogWeight[dogWeight.selectedIndex].value == 90) {
+                            dogFood = "2 & 1/2 to 2 & 3/4";
+                        }
+                        petFoodAmount = document.getElementById("petFoodAmount").innerHTML = '<p class="result">For your ' + animal + ' the recommended amount of dry food is ' + dogFood + ' cups per day.</p>';
+
+                   } else {
+                        animal = 'empty';
+                    }
+                    if ((catWeight < 1 && dogWeight < 1) || animal == "empty") {
+                        catWeight = alert("Please choose your pet type and weight, please try again.");
+                        return;
+                    }
+                }
+                function clearText() {
+                }
+                document.getElementById("submit").addEventListener("click", petFoodCalc, false);
+                document.getElementById("cat").addEventListener("click", clearText, false);
+                document.getElementById("dog").addEventListener("click", clearText, false);
+				
+            </script>
+        </div>
+    </div>
+    <div id="footer-wrapper">
+        <footer id="footer"><p><a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation">HTML5 Validation</a></p></footer>
+    </div>
+	
+</body>
+</html>

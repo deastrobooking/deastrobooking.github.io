@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="This is the Home page of the project." />
+<meta name="robots" content="index, follow">
+<title> Project 5</title>
+<link rel="stylesheet" href="styles.css" type="text/css" />
+<script src="js/footer.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/modernizr.custom.05819.js"></script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--
+pied, a free CSS web template by ZyPOP (zypopwebtemplates.com/)
+
+Download: http://zypopwebtemplates.com/
+
+License: Creative Commons Attribution
+//-->
+
+</head>
+<body>
+<div id="container">
+    <header>
+	<div class="width">
+    		<h1>Restaurant Menu</h1>
+       	</div>
+    </header>
+    <nav>
+	<div class="width">
+    		<ul>
+			
+        		<li class="start selected"><a href="index.html">Home</a></li>
+        	    	<li><a href="lunchmenu.html">Lunch Menu</a></li>
+         	   	<li><a href="dinnermenu.html">Dinner Menu</a></li>
+				
+          	 	<li class="end"><a href="drink.html">Drink Mune</a></li>
+        	</ul>
+	</div>
+    </nav>
+
+
+    <div id="body" class="width">
+
+		<div style="text-align:center;">
+	    <img src="image/restaurant.jpg" alt="This Image is too make page look good." 
+		title="Restaurant Menu" height="500" width="900" class="responsive">
+		</div>
+
+	
+
+				
+			
+			<h2>About My Restaurant Menu</h2>
+		<p>We eat with our eyes first, but before we see what we're eating,
+		we imagine it as we read the menu descriptions. One image is said to
+		be worth a thousand words, but do not underestimate the power of words.
+		A few cleverly placed sentences here and there can boost the sales of your
+		restaurant's food and drink descriptions and my restaurant Manu well be more affective to customer.</p>
+
+
+	
+			<h2>Lunch Manu</h2>
+           <p> Lunch menu to show off your special midday restaurant or cafeteria service in style.My restaurant lunch menu will be different from the dinner menu because, In lunch, time customers always want to have
+		   a quick bite when they are going to work in the morning. Most of the time, customers like to have healthy food in the afternoon
+		   to have their day go easy that's why My restaurant lunch menu will have something simple and light food to eat, so my restaurant
+		   will have that category of food.</P>
+		   
+		   <h2>Dinner Manu</h2>
+           <p>The dinner menu is going to be the main menu for my restaurant. The dinner menu will be printed larger. It will be attractive
+		   it will have expensive food and drink. Best food will be listed first and the food description should be written on the menu.
+		 		 I will have the price of each food item written on the menu on the right side of the food item.</P>
+
+ <h2>Food Selection from manu</h2>
+      <form>
+         <input type="checkbox" id="item1" value="20" />
+         <label for="item1">Signature Onion Soup ~ 7 ($20.00)</label>
+         <input type="checkbox" id="item2" value="22" />
+         <label for="item2">Lump Crab Cake Sandwich ($22.00)</label>
+         <input type="checkbox" id="item3" value="15" />
+         <label for="item3">Speacial Burger ($15.00)</label>
+         <input type="checkbox" id="item4" value="17" />
+         <label for="item4">Fried Chicken Tenderloins ($17.00)</label>
+         <input type="checkbox" id="item5" value="1" />
+         <label for="item5">Coca Cola ($1.00)</label>
+         <input type="button" value="Submit" id="sButton" />
+		  <input type="reset" name="reset" value="Reset" id="reset"/>
+      </form>
+	  
+	 
+      <div>
+	  <p id="total"></p>
+<label id="lblGreetings"></label>
+<p id="demo"></p>
+<script>
+    var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning Sorre we are close now';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon It is Lunch Time';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening It is Dinner Time';
+
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + '</b> and welcome to our Restarunt!';
+
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+ function calcTotal(){      
+         var itemTotal = 0;
+         var items = document.getElementsByTagName("input");
+         for (var i = 0; i < 5; i++){
+            if (items[i].checked){
+               itemTotal += (items[i].value * 1);
+            }
+         }
+         document.getElementById("total").innerHTML = "Your order total is $" + itemTotal + ".00";
+      }
+      var submitButton = document.getElementById("sButton");
+      if (submitButton.addEventListener){
+            submitButton.addEventListener("click", calcTotal, false);
+      } else if (submitButton.attachEvent){
+            submitButton.attachEvent("onclick", calcTotal);
+	  
+      }
+	  var resetButton = document.getElementById("sButton");
+		if (resetButton.addEventListener){
+            resetButton.addEventListener("click", calcTotal, false);
+      }
+	   else if (resetButton.attachEvent){
+            resetButton.attachEvent("onclick", calcTotal);
+      }
+	
+	  
+</script> 
+
+
+<!--<script src="js/pointscript.js"></script> -->
+<script> 
+
+
+
+
+<article>
+Todays Date:
+
+<input type="text" id="currentDate">
+ 
+<script>
+
+
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  document.getElementById("currentDate").value = date;
+</script>
+
+
+
+
+<h4>If you are interseted in learning more about the Restaurant menu fill out the form below!</h4>
+<form name="opinion" action="mailto:abulmohsinshordar@gmail.com" method="post" enctype="text/plain">
+         <fieldset id="contactinfo">
+             <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="First Name" required><br>
+   <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Last Name" required><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="placeholder@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br>
+            <label for="phone">Enter a phone number:</label><br><br>
+  <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+         
+
+           
+             <select id="cityselect" name="cityselect">
+               	  <option label="Choose City" value="choose"></option>
+                  <option value="Detroit">Detroit</option>
+                  <option value="Warren">Warren</option>
+				  <option value="Sterling Heights">Sterling Heights</option>
+				  <option value="Troy">Troy</option>
+				  <option value="Hamtramck">Hamtramck</option>
+				  
+             </select>
+			 </fieldset>
+				<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">
+				Additional Comment!
+				</textarea>
+			 <fieldset id="submitbutton">
+            <input type="submit" id="submitBtn" value="Submit" />
+			<input type="reset" value="Reset" />
+         </fieldset>
+      </form>
+	 
+
+<p>If you click the "Submit" button, the form-data will be sent abulmohsinshordar@gmail.</p>
+
+		
+	
+		
+    	<div class="clear"></div>
+    </div>
+    <footer>
+        
+        <div class="footer-bottom">
+		<p> This site is for educational purposes only.</p>
+		<a href="mailto:abulmohsinshordar@gmail.com">Send me an email</a>
+            <p><a href="http://zypopwebtemplates.com/">Free CSS Website Templates</a> by ZyPOP</p>
+			<p><a href="http://validator.w3.org/check?uri=referer" title="HTML5 Validation - W3C">HTML5 Validation</a></p>
+			<script>navigation();</script>
+         </div>
+    </footer>
+</div>
+</div>
+
+</body>
+</html>
