@@ -14,105 +14,97 @@ var httpRequest = false;
 var countrySel;
 
 function getRequestObject() {
-	 try{ 
-	 	httpRequest = new XMLHttpRequest(); 
-	 }
+  try {
+    httpRequest = new XMLHttpRequest();
+  } catch (requestError) {
+    // display city & state fields and labels for manual input
+    document.getElementById("zipset").style.visibility = "visible";
+    document.getElementById("csset").style.visibility = "visible";
+    // remove event listeners so additional input is ignored
+    var germany = document.getElementById("germany");
+    var us = document.getElementById("us");
+    var zip = document.getElementById("zip").value;
 
-	catch (requestError) { 
-		// display city & state fields and labels for manual input 
-		document.getElementById("zipset").style.visibility = "visible";
-		document.getElementById("csset").style.visibility = "visible"; 
-		// remove event listeners so additional input is ignored 
-		var germany = document.getElementById("germany");
-		var us = document.getElementById("us");
-		var zip = document.getElementById("zip").value; 
+    if (zip.addEventListener) {
+      germany.removeEventListener("click", checkButtons, false);
+      us.removeEventListener("click", checkButtons, false);
+      zip.removeEventListener("keyup", checkInput, false);
+    } else if (zip.attachEvent) {
+      germany.detachEvent("onclick", checkButtons);
+      us.detachEvent("onclick", checkButtons);
+      zip.detachEvent("onkeyup", checkInput);
+    } //end if/else
 
-			if (zip.addEventListener) {
-				germany.removeEventListener("click", checkButtons, false);
-				us.removeEventListener("click", checkButtons, false);
-				zip.removeEventListener("keyup", checkInput, false); 
-			} else if (zip.attachEvent) {
-				germany.detachEvent("onclick", checkButtons); 
-				us.detachEvent("onclick", checkButtons);
-				zip.detachEvent("onkeyup", checkInput);
-			}//end if/else
-	
-	return false;
+    return false;
+  } //end try/catch
 
-	}//end try/catch 
+  return httpRequest;
+} //end function
 
-	return httpRequest;
+function checkButtons() {
+  var germany = document.getElementById("germany");
+  var us = document.getElementById("us");
+  if (germany.checked || us.checked) {
+    document.getElementById("zipset").style.visibility = "visible";
+    if (germany.checked) {
+      countrySel = "de";
+    } else {
+      countrySel = "us";
+    } //end if/else
+  } //end if
+} //end function
 
-}//end function
+function checkInput() {
+  var zip = document.getElementById("zip").value;
+  if (zip.length === 5) {
+    getLocation();
+  } else {
+    document.getElementById("city").value = "";
+    document.getElementById("state").value = "";
+  } //end if/else
+} //end function
 
+function getLocation() {
+  var zip = document.getElementById("zip").value;
+  if (!httpRequest) {
+    httpRequest = getRequestObject();
+  } //end if
 
-function checkButtons() { 
-	var germany = document.getElementById("germany"); 
-	var us = document.getElementById("us"); 
-		if (germany.checked || us.checked) {
-			document.getElementById("zipset").style.visibility = "visible";
-			if (germany.checked) { countrySel = "de";
-				} else { 	
-					countrySel = "us";
-				}//end if/else
-		}//end if
-}//end function
+  httpRequest.abort();
+  httpRequest.open(
+    "get",
+    "http://api.zippopotam.us/" + countrySel + "/" + zip,
+    true
+  );
+  httpRequest.send();
+  httpRequest.onreadystatechange = displayData;
+} //end function
 
+function displayData() {
+  if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+    var resultData = JSON.parse(httpRequest.responseText);
+    var city = document.getElementById("city");
+    var state = document.getElementById("state");
+    city.value = resultData.places[0]["place name"];
+    state.value = resultData.places[0]["state abbreviation"];
+    document.getElementById("zip").blur();
+    document.getElementById("csset").style.visibility = "visible";
+  } //end if
+} //end function
 
+var germany = document.getElementById("germany");
+var us = document.getElementById("us");
+if (us.addEventListener) {
+  germany.addEventListener("click", checkButtons, false);
+  us.addEventListener("click", checkButtons, false);
+} else if (us.attachEvent) {
+  germany.attachEvent("onclick", checkButtons);
+  us.attachEvent("onclick", checkButtons);
+} //end if/else/if
 
-function checkInput() { 
-	var zip = document.getElementById("zip").value; 
-		if (zip.length === 5) {
-			getLocation(); 
-		}else{
-			document.getElementById("city").value = ""; 
-			document.getElementById("state").value = "";
-		}//end if/else
-}//end function
-
-
-function getLocation() { 
-	var zip = document.getElementById("zip").value; 
-	if (!httpRequest) {
-		httpRequest = getRequestObject();
-	}//end if
-	
-	httpRequest.abort(); 
-	httpRequest.open("get","http://api.zippopotam.us/" + countrySel + "/" + zip, true);
-	httpRequest.send(); 
-	httpRequest.onreadystatechange = displayData;
-}//end function
-
-
-function displayData() { 
-	if(httpRequest.readyState === 4 && httpRequest.status === 200) {
-		var resultData = JSON.parse(httpRequest.responseText); 
-		var city = document.getElementById("city"); 
-		var state = document.getElementById("state"); 
-		city.value = resultData.places[0]["place name"]; 
-		state.value = resultData.places[0]["state abbreviation"]; 
-		document.getElementById("zip").blur(); 
-		document.getElementById("csset").style.visibility = "visible";
-	}//end if
-
-}//end function
-
-var germany = document.getElementById("germany"); 
-var us = document.getElementById("us"); 
-	if (us.addEventListener) {
-		germany.addEventListener("click", checkButtons, false);
-		us.addEventListener("click", checkButtons, false); 
-	} else if (us.attachEvent) {
-		germany.attachEvent("onclick", checkButtons); 
-		us.attachEvent("onclick", checkButtons);
-	}//end if/else/if
-
-
-var zip = document.getElementById("zip"); 
-	if (zip.addEventListener) {
-		zip.addEventListener("keyup", checkInput, false); 
-	} else if (zip.attachEvent) {
-		zip.attachEvent("onkeyup", checkInput);
-	}//end if/else
-
-
+var zip = document.getElementById("zip");
+if (zip.addEventListener) {
+  zip.addEventListener("keyup", checkInput, false);
+} else if (zip.attachEvent) {
+  zip.attachEvent("onkeyup", checkInput);
+} //end if/else
