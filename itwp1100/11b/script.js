@@ -38,7 +38,9 @@ function getRequestObject() {
   }
   return httpRequest;
 }
-//
+// function called when user clicks a button. assigns countrySel the correct abbreviation
+// assigned by zippopotam.us_____________________________________________________________
+
 function checkButtons() {
   var germany = document.getElementById("germany");
   var us = document.getElementById("us");
@@ -68,11 +70,7 @@ function getLocation() {
     httpRequest = getRequestObject();
   }
   httpRequest.abort();
-  httpRequest.open(
-    "get",
-    "http://api.zippopotam.us/" + countrySel + "/" + zip,
-    true
-  );
+  httpRequest.open("get", "http://api.zippopotam.us/" + countrySel + "/" + zip, true);
   httpRequest.send();
   httpRequest.onreadystatechange = displayData;
 }
@@ -82,8 +80,10 @@ function displayData() {
     var resultData = JSON.parse(httpRequest.responseText);
     var city = document.getElementById("city");
     var state = document.getElementById("state");
+
     city.value = resultData.places[0]["place name"];
     state.value = resultData.places[0]["state abbreviation"];
+    
     document.getElementById("zip").blur();
     document.getElementById("csset").style.visibility = "visible";
   }
