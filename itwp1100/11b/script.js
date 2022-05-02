@@ -1,6 +1,6 @@
 /*  JavaScript 6th Edition
     Chapter 11
-    Hands-on Project 11-4
+    Hands-on Project 11-5
 
     Author: Randolph Chabot
     Date:   4/26/2022
@@ -9,22 +9,22 @@
 */
 
 "use strict";
-var httpRequest = false;
 
+var httpRequest = false;
+// VAR countrySel tracks country selcted by user 
 var countrySel;
 
 function getRequestObject() {
   try {
     httpRequest = new XMLHttpRequest();
   } catch (requestError) {
-    // display city & state fields and labels for manual input
+    //display city & state fields and labels for manual input
     document.getElementById("zipset").style.visibility = "visible";
     document.getElementById("csset").style.visibility = "visible";
     // remove event listeners so additional input is ignored
     var germany = document.getElementById("germany");
     var us = document.getElementById("us");
     var zip = document.getElementById("zip").value;
-
     if (zip.addEventListener) {
       germany.removeEventListener("click", checkButtons, false);
       us.removeEventListener("click", checkButtons, false);
@@ -33,14 +33,12 @@ function getRequestObject() {
       germany.detachEvent("onclick", checkButtons);
       us.detachEvent("onclick", checkButtons);
       zip.detachEvent("onkeyup", checkInput);
-    } //end if/else
-
+    }
     return false;
-  } //end try/catch
-
+  }
   return httpRequest;
-} //end function
-
+}
+//
 function checkButtons() {
   var germany = document.getElementById("germany");
   var us = document.getElementById("us");
@@ -50,9 +48,9 @@ function checkButtons() {
       countrySel = "de";
     } else {
       countrySel = "us";
-    } //end if/else
-  } //end if
-} //end function
+    }
+  }
+}
 
 function checkInput() {
   var zip = document.getElementById("zip").value;
@@ -61,15 +59,14 @@ function checkInput() {
   } else {
     document.getElementById("city").value = "";
     document.getElementById("state").value = "";
-  } //end if/else
-} //end function
+  }
+}
 
 function getLocation() {
   var zip = document.getElementById("zip").value;
   if (!httpRequest) {
     httpRequest = getRequestObject();
-  } //end if
-
+  }
   httpRequest.abort();
   httpRequest.open(
     "get",
@@ -78,7 +75,7 @@ function getLocation() {
   );
   httpRequest.send();
   httpRequest.onreadystatechange = displayData;
-} //end function
+}
 
 function displayData() {
   if (httpRequest.readyState === 4 && httpRequest.status === 200) {
@@ -89,9 +86,9 @@ function displayData() {
     state.value = resultData.places[0]["state abbreviation"];
     document.getElementById("zip").blur();
     document.getElementById("csset").style.visibility = "visible";
-  } //end if
-} //end function
-
+  }
+}
+// Creating Event Listeners 
 var germany = document.getElementById("germany");
 var us = document.getElementById("us");
 if (us.addEventListener) {
@@ -100,11 +97,11 @@ if (us.addEventListener) {
 } else if (us.attachEvent) {
   germany.attachEvent("onclick", checkButtons);
   us.attachEvent("onclick", checkButtons);
-} //end if/else/if
+}
 
 var zip = document.getElementById("zip");
 if (zip.addEventListener) {
   zip.addEventListener("keyup", checkInput, false);
 } else if (zip.attachEvent) {
   zip.attachEvent("onkeyup", checkInput);
-} //end if/else
+}
