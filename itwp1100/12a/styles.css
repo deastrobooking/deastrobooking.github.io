@@ -1,6 +1,6 @@
 /*  JavaScript 6th Edition
-    Chapter 11
-    Hands-on Project 11-4
+    Chapter 12
+    Hands-on Project 12-1
 
     Filename: styles.css
 */
@@ -63,9 +63,9 @@ ol, ul {
 
 /* page header */
 header {
-   background: #FFCF40;
+   background: #04819E;
    width: 100%;
-   color: black;
+   color: #FFFFFF;
    font-size: 48px;
    text-align: center;
    line-height: 1.5em;
@@ -76,62 +76,26 @@ header {
 article {
    width: 640px;
    text-align: left;
-   background: white;
+   background: ivory;
    padding: 20px;
-   overflow: auto;
 }
 
 h2 {
    font-weight: bold;
-   font-size: 30px;
-   text-align: center;
+   font-size: 24px;
 }
 
-/* form */
-form {
-   text-align: left;
-   padding: 2em;
-   background: ivory;
-   border: 1px solid black;
-   position: relative;
-   margin: 1em auto;
-   font-size: 1em;
+h3 {
+   font-weight: bold;
+   font-size: 18px;
+   margin: 20px 0 10px 0;
+   font-family: "times new roman", times, serif;
 }
 
-#csset {
-   visibility: hidden;
+li, p {
+   margin-bottom: 0.5em;
 }
 
-input, label {
-   float: left;
-   margin-bottom: 0.4em;
+.ingr, .instr {
+   display: none;
 }
-
-label {
-   width: 12em;
-   text-align: right;
-   margin-right: 0.4em;
-   line-height: 1.4em;
-}
-
-#uslabel {
-   width: auto;
-   margin-left: 1.4em;
-}
-
-#zipset label, #csset label {
-   clear: left;
-}
-
-#city {
-   width: 12em;
-}
-
-#state {
-   width: 3em;
-}
-
-#zip {
-   width: 6em;
-}
-
