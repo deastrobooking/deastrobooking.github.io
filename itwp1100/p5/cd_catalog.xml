@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+  <CD>
+    <TITLE>Dragonball Durag</TITLE>
+    <ARTIST>Thundercat</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Brainfeeder</COMPANY>
+    <PRICE>10.90</PRICE>
+    <YEAR>2019</YEAR>
+    <City>Los Angeles</City>
+  </CD>
+  <CD>
+    <TITLE>Jupiter Jazz</TITLE>
+    <ARTIST>Underground Resistance</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>UR</COMPANY>
+    <PRICE>9.90</PRICE>
+    <YEAR>1992</YEAR>
+    <City>Detroit</City>
+
+  </CD>
+  <CD>
+    <TITLE>Modaji</TITLE>
+    <ARTIST>Harvey Mason</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Artista</COMPANY>
+    <PRICE>9.90</PRICE>
+    <YEAR>1975</YEAR>
+    <City>Atlantic City</City>
+  </CD>
+  <CD>
+    <TITLE>I'm Still Here</TITLE>
+    <ARTIST>The Notations</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>Twinight</COMPANY>
+    <PRICE>9.90</PRICE>
+    <YEAR>1970</YEAR>
+    <City>Chicago</City>
+  </CD>
+  
+</CATALOG>
