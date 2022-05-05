@@ -1,2 +1,0 @@
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-https://www.w3schools.com/js/js_ajax_intro.asp
