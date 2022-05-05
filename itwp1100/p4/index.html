@@ -181,61 +181,8 @@
 
       </p>
     </aside>
-    <!--Middle Box Elements-->
     <main class="cell cell-3">
-      <!--Calling Geogebra app-->
       <div id="ggb-element"></div>
-
-
-      <!--Custom Code for Musical Likes. Needs Gui-->
-      <div id='showCD'></div><br>
-      <input type="button" onclick="previous()" value="<<">
-      <input type="button" onclick="next()" value=">>">
-
-      <script>
-        let i = 0;
-        let len;
-        let cd;
-
-        const xhttp = new XMLHttpRequest();
-        xhttp.onload = function () {
-          const xmlDoc = xhttp.responseXML;
-          cd = xmlDoc.getElementsByTagName("CD");
-          len = cd.length;
-          displayCD(i);
-        }
-        xhttp.open("GET", "cd_catalog.xml");
-        xhttp.send();
-
-        function displayCD(i) {
-          document.getElementById("showCD").innerHTML =
-            "Artist: " +
-            cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-            "<br>Title: " +
-            cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-            "<br>Price: " +
-            cd[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
-            "<br>Year: " +
-            cd[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
-            "<br>City: " +
-            cd[i].getElementsByTagName("City")[0].childNodes[0].nodeValue;
-        }
-
-        function next() {
-          if (i < len - 1) {
-            i++;
-            displayCD(i);
-          }
-        }
-
-        function previous() {
-          if (i > 0) {
-            i--;
-            displayCD(i);
-          }
-        }
-      </script>
-
 
     </main>
     <aside class="cell cell-4">
@@ -257,8 +204,7 @@
     </aside>
     <footer class="cell cell-5">
       <script src="js/scriptlesson.js"></script>
-      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp2%2Findex.html"
-        id="ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp2%2Findex.html" id="ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
     </footer>
   </div>
   <!-- Call for Geogebra Graphing Calculator. Simply change the appName parameter from graphing to geometry or 3d to get one of our other apps. To load an activity you can use eg "material_id":"RHYH3UQ8" or "filename":"myFile.ggb" and you can customize our apps further by using various
