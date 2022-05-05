@@ -1,0 +1,21 @@
+Cited References. 
+
+VIEW      
+chat app 
+Ues 
+view.html    script.js      style.css    main.css
+________________________________________________________________________________
+
+Likes 
+Referenced like a seperate web page through index.html
+uses Replit server to run simple video game. Code can be viewed and altered
+Code source mentioned in display.
+
+Interesting way to incorporate languages outside of standard web support!
+
+<iframe frameborder="0" width="100%" height="500px" src="https://pac-man-js.mallaja.repl.co/"></iframe>
+
+This is in the running state of the software all ready which can be called by url if you run the program first and grab the url while the app is running.  Click screen to play 
+____________________________________________________________________________
+
+
