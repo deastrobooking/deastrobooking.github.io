@@ -123,6 +123,9 @@ Add a black background color to the top navigation */
   border:solid #0adfdf .5em;
 
 }
+#githubsearch {
+  color: #04AA6D;
+}
 .cell-4 {
   background: rgb(255, 222, 113);
   grid-area: right;

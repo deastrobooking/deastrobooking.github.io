@@ -18,6 +18,10 @@
     -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+   <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
 
 </head>
 
@@ -235,6 +239,20 @@
           }
         }
       </script>
+      <div id = "githubsearch">
+        <h1>Search repos by name on GitHub</h1>
+        <form action="#" class="js-search-form">
+          <label for="query"></label>
+          <input type="text" class="js-query">
+          <button type="submit">Search</button>
+        </form>
+        
+        <h2>Results</h2>
+        <div class="js-search-results">
+          
+        </div>
+
+      </div>
 
 
     </main>
@@ -270,6 +288,8 @@
       applet.inject('ggb-element');
     });
   </script>
+  <!--Calls Code for Github Search API-->
+  <script src="index2.js"></script>
 </body>
 
 </html>
