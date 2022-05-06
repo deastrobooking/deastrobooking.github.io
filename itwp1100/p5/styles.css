@@ -126,6 +126,10 @@ Add a black background color to the top navigation */
 #githubsearch {
   color: #04AA6D;
 }
+
+#jsearchform {
+  
+}
 .cell-4 {
   background: rgb(255, 222, 113);
   grid-area: right;
