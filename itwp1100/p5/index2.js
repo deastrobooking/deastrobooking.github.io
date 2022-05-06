@@ -1,3 +1,14 @@
+/*
+JavaScript 6th Edition
+Project 3
+
+Author: Randolph Chabot 
+Date:   4/15/2022
+
+Filename: contact.html
+
+*/
+
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
 function getDataFromApi(searchTerm, callback) {

@@ -1,3 +1,14 @@
+/*
+JavaScript 6th Edition
+Project 3
+
+Author: Randolph Chabot 
+Date:   4/15/2022
+
+Filename: contact.html
+
+*/
+
 var password = "12345"
 
 function passcheck() {
