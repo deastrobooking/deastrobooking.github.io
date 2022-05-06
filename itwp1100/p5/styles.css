@@ -127,8 +127,8 @@ Add a black background color to the top navigation */
   color: #04AA6D;
 }
 
-#jsearchform {
-  
+#textboxer{
+  border: #04AA6D .5em solid;
 }
 .cell-4 {
   background: rgb(255, 222, 113);
