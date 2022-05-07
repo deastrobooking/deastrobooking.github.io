@@ -242,8 +242,8 @@
       <div class="contentBox" id="contentBox">
 
 
-        <script type="text/javascript" src="https://www.geogebra.org/apps/deployggb.js"></script>
-        <script type="text/javascript">
+        <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+        <script>
 
           var parameters1 = {
             "width": 800,
@@ -317,20 +317,15 @@
 
         </script>
 
-        <p>
-
-
         <div id="applet_container3"></div>
-        </p>
-
 
       </div>
 
       <!--Implementing for Project 5 1100-->
       <!--Custom Code for Musical Likes. Needs Gui-->
       <div id='showCD'></div><br>
-      <input id="next" type="button" onclick="previous()" value="<<">
-      <input id="next" type="button" onclick="next()" value=">>">
+      <input class="next" type="button" onclick="previous()" value="<<">
+      <input class="next" type="button" onclick="next()" value=">>">
 
       <script>
         let i = 0;
@@ -381,7 +376,7 @@
         <h1>Repo Query</h1>
         <form action="#" class="js-search-form">
           <label for="query"></label>
-          <input type="text" class="js-query" id="textboxer">
+          <input type="text" class="js-query" id="query">
           <button type="submit" class="button" style="vertical-align:middle"><span>SEARCH</span></button>
         </form>
 
