@@ -1,17 +1,49 @@
+Chapter 11 Javascript 
+Project 5 Notes
+Randolph J. Chabot Jr. 
+ITWP 1100 5/7/22
+
+Geogebra File Format and XML & AJAX Case Project Pg 811 Project 5
+____________________________________________________________________
+Index.html Lines 245 - 326 API uses custom XML file type ggb 
+Powerful Oppurtunities for self grading interactive assignments in math. 
+Easy to connect with AJAX and JSON to Google classroom gradebook through Sheets api. 
+
+https://wiki.geogebra.org/en/Reference:XML
+https://www.geogebra.org/m/eMBf6HAu
+https://www.geogebra.org/m/uhsmpcpe
+
+
+Tutorial on exporting data from Geogebra to google sheets api 
+https://www.geogebra.org/m/uhsmpcpe
+https://wiki.geogebra.org/en/Reference:GeoGebra_Apps_API
+_______________________________________________________________________________________
+
+Github Search API Case Project 811
+index.html
+lines 378-398
+Javascript and AJAX for App is written  in index2.js 
+Most CSS in styles.css & The hover event for the search button is written at the top of the page in index.html
+
 https://www.freecodecamp.org/news/learn-javascript-form-validation-by-making-a-form/
 
 https://codepen.io/joyshaheb/pen/XWgdOyY
 
 https://www.freecodecamp.org/news/learn-javascript-form-validation-by-making-a-form/
 
-Tutorial on exporting data from Geogebra to google sheets api 
-https://www.geogebra.org/m/uhsmpcpe
-https://wiki.geogebra.org/en/Reference:GeoGebra_Apps_API
+-------CASE PROJECT CLOSING-----------------------
+This Lesson Was Especially Fun! 
 
-Geogebra File Format and XML & AJAX
-https://wiki.geogebra.org/en/Reference:XML
-https://www.geogebra.org/m/eMBf6HAu
-https://www.geogebra.org/m/uhsmpcpe
+Helped me implement more advanced Geogebra API's and will be inspiring me as I enter this learning game boot camp through the highschool! 
+Also I learned how to make and specialized search engine from the lesson in Chapter 11. 
 
+______________________________________________________________________________________
 
+Project 5 
 
+Part 2. w3 Schools Tutorial 
+cd_catalog.xml was modified for the project 
+html in index.html 
+line 328 - 376
+
+Implented and modified Tutorial code and connected to site styles. 
