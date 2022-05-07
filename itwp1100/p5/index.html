@@ -30,54 +30,52 @@
     -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-   <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <style>
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: yellowgreen;
+      border: none;
+      color: black;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
 
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
 </head>
 <!-- Style for github search button P5-->
-<style>
-.button {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: yellowgreen;
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-</style>
 <body>
   <div class="topnav" id="myTopnav">
     <header class="cell cell-1">
@@ -242,90 +240,93 @@
     <main class="cell cell-3">
       <!--Calling Geogebra app-->
       <div class="contentBox" id="contentBox">
-        
+
 
         <script type="text/javascript" src="https://www.geogebra.org/apps/deployggb.js"></script>
         <script type="text/javascript">
 
-			 var parameters1 = {
-                        "width":800,
-                        "height":450,
-                        "prerelease":false,
-                        "showToolBar":false,
-                        "borderColor":null,
-                        "showMenuBar":false,
-                        "showAlgebraInput":false,
-                        "showResetIcon":true,
-                        "enableLabelDrags":false,
-                        "enableShiftDragZoom":true,
-                        "enableRightClick":false,
-                        "capturingThreshold":null,
-                        "showToolBarHelp":false,
-                        "errorDialogsActive":true,
-                        "useBrowserForJS":false,
-                        "material_id":"b8upej4p"};
-                var applet1 = new GGBApplet(parameters1, true);
-              
-			  var parameters2 = {
-                        "width":800,
-                        "height":400,
-                        "prerelease":false,
-                        "showToolBar":false,
-                        "borderColor":null,
-                        "showMenuBar":false,
-                        "showAlgebraInput":false,
-                        "showResetIcon":true,
-                        "enableLabelDrags":false,
-                        "enableShiftDragZoom":true,
-                        "enableRightClick":false,
-                        "capturingThreshold":null,
-                        "showToolBarHelp":false,
-                        "errorDialogsActive":true,
-                        "useBrowserForJS":false,
-                        "material_id":"cpz3fydp"};
-                var applet2 = new GGBApplet(parameters2, true);
-              //  when used with Math Apps Bundle, uncomment this:
-              //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web/');
-				
-				var parameters3 = {
-                        "width":800,
-                        "height":500,
-                        "prerelease":false,
-                        "showToolBar":false,
-                        "borderColor":null,
-                        "showMenuBar":false,
-                        "showAlgebraInput":false,
-                        "showResetIcon":true,
-                        "enableLabelDrags":false,
-                        "enableShiftDragZoom":true,
-                        "enableRightClick":false,
-                        "capturingThreshold":null,
-                        "showToolBarHelp":false,
-                        "errorDialogsActive":false,
-                        "useBrowserForJS":false,
-                        "material_id":"zvqu2gpv"};
-                var applet3 = new GGBApplet(parameters3, true);
-              //  when used with Math Apps Bundle, uncomment this:
-              //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web/');
+          var parameters1 = {
+            "width": 800,
+            "height": 450,
+            "prerelease": false,
+            "showToolBar": false,
+            "borderColor": null,
+            "showMenuBar": false,
+            "showAlgebraInput": false,
+            "showResetIcon": true,
+            "enableLabelDrags": false,
+            "enableShiftDragZoom": true,
+            "enableRightClick": false,
+            "capturingThreshold": null,
+            "showToolBarHelp": false,
+            "errorDialogsActive": true,
+            "useBrowserForJS": false,
+            "material_id": "b8upej4p"
+          };
+          var applet1 = new GGBApplet(parameters1, true);
 
-                window.onload = function() { 
-				
-					applet3.inject(applet_container3);
-					}
-				
+          var parameters2 = {
+            "width": 800,
+            "height": 400,
+            "prerelease": false,
+            "showToolBar": false,
+            "borderColor": null,
+            "showMenuBar": false,
+            "showAlgebraInput": false,
+            "showResetIcon": true,
+            "enableLabelDrags": false,
+            "enableShiftDragZoom": true,
+            "enableRightClick": false,
+            "capturingThreshold": null,
+            "showToolBarHelp": false,
+            "errorDialogsActive": true,
+            "useBrowserForJS": false,
+            "material_id": "cpz3fydp"
+          };
+          var applet2 = new GGBApplet(parameters2, true);
+          //  when used with Math Apps Bundle, uncomment this:
+          //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web/');
+
+          var parameters3 = {
+            "width": 800,
+            "height": 500,
+            "prerelease": false,
+            "showToolBar": false,
+            "borderColor": null,
+            "showMenuBar": false,
+            "showAlgebraInput": false,
+            "showResetIcon": true,
+            "enableLabelDrags": false,
+            "enableShiftDragZoom": true,
+            "enableRightClick": false,
+            "capturingThreshold": null,
+            "showToolBarHelp": false,
+            "errorDialogsActive": false,
+            "useBrowserForJS": false,
+            "material_id": "zvqu2gpv"
+          };
+          var applet3 = new GGBApplet(parameters3, true);
+          //  when used with Math Apps Bundle, uncomment this:
+          //  applet.setHTML5Codebase('GeoGebra/HTML5/5.0/web/');
+
+          window.onload = function () {
+
+            applet3.inject(applet_container3);
+          }
+
 
         </script>
-		
-		<p>
-		
-		
-		<div id="applet_container3"></div>
-		</p>
-		
-	
-</div>
 
-<!--Implementing for Project 5 1100-->
+        <p>
+
+
+        <div id="applet_container3"></div>
+        </p>
+
+
+      </div>
+
+      <!--Implementing for Project 5 1100-->
       <!--Custom Code for Musical Likes. Needs Gui-->
       <div id='showCD'></div><br>
       <input id="next" type="button" onclick="previous()" value="<<">
@@ -376,17 +377,17 @@
       </script>
       <!--Github search API using AJAX Project 5-->
 
-      <div id = "githubsearch">
+      <div id="githubsearch">
         <h1>Repo Query</h1>
         <form action="#" class="js-search-form">
           <label for="query"></label>
           <input type="text" class="js-query" id="textboxer">
           <button type="submit" class="button" style="vertical-align:middle"><span>SEARCH</span></button>
         </form>
-        
+
         <h2>Results</h2>
         <div class="js-search-results">
-          
+
         </div>
 
       </div>
@@ -412,7 +413,8 @@
     </aside>
     <footer class="cell cell-5">
       <script src="js/scriptlesson.js"></script>
-      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp2%2Findex.html" id="ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fchabotr564.macombserver.net%2Fitwp1100%2Fp5%2Findex.html"
+        id="ftnavi" title='HTML5 Validation'>HTML5 Validation</a>
     </footer>
   </div>
   <!-- Call for Geogebra Graphing Calculator. Simply change the appName parameter from graphing to geometry or 3d to get one of our other apps. To load an activity you can use eg "material_id":"RHYH3UQ8" or "filename":"myFile.ggb" and you can customize our apps further by using various
