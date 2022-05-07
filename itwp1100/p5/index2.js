@@ -9,6 +9,7 @@ Filename: contact.html
 
 */
 // Github search api settings. 
+// Potential for future multiple search metrics and associations through constants. 
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
 function getDataFromApi(searchTerm, callback) {
@@ -25,7 +26,9 @@ function getDataFromApi(searchTerm, callback) {
 
   $.ajax(settings);
 }
-
+/*Gathering Ajax Data to be sent to Results Section for disply____________________________
+_____________________________________________________________
+*/ 
 function renderResult(result) {
   return `
     <div>
@@ -36,7 +39,9 @@ function renderResult(result) {
     </div>
   `;
 }
-
+/*Sending Data to Results Section in index.html____________________________
+_____________________________________________________________
+*/ 
 function displayGitHubSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   $('.js-search-results').html(results);
