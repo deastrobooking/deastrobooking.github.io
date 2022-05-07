@@ -8,7 +8,7 @@ Date:   4/15/2022
 Filename: contact.html
 
 */
-
+// Github search api settings. 
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 
 function getDataFromApi(searchTerm, callback) {

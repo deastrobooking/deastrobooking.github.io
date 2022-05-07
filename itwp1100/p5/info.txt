@@ -3,3 +3,12 @@ https://www.freecodecamp.org/news/learn-javascript-form-validation-by-making-a-f
 https://codepen.io/joyshaheb/pen/XWgdOyY
 
 https://www.freecodecamp.org/news/learn-javascript-form-validation-by-making-a-form/
+
+Tutorial on exporting data from Geogebra to google sheets api 
+https://www.geogebra.org/m/uhsmpcpe
+https://wiki.geogebra.org/en/Reference:GeoGebra_Apps_API
+
+Geogebra File Format and XML & AJAX
+https://wiki.geogebra.org/en/Reference:XML
+https://www.geogebra.org/m/eMBf6HAu
+https://www.geogebra.org/m/uhsmpcpe
