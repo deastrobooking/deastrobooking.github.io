@@ -16,7 +16,7 @@ function getDataFromApi(searchTerm, callback) {
     url: GITHUB_SEARCH_URL,
     data: {
       q: `${searchTerm} in:name`,
-      per_page: 5
+      per_page: 100
     },
     dataType: 'json',
     type: 'GET',
